@@ -1,0 +1,44 @@
+
+
+::-webkit-scrollbar-track {
+  // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: rgba($black, 0);
+}
+::-webkit-scrollbar {
+  width: 0px;
+  height: 1px;
+  background-color: rgba($black, 0);
+}
+::-webkit-scrollbar-thumb {
+  background-color: $theme2;
+}
+.btn-close {
+  filter:invert(1);
+}
+body{
+  font-family: 'Poppins';
+}
+.icon{
+  width: 16px;
+  height: 16px;
+}
+.head{
+  font-size: 38px;
+  line-height: 46px;
+  color: $theme1;
+}
+.heading{
+  font-size: 75px;
+  line-height: 85px;
+
+}
+.subheading{
+  font-size: 18px;
+  line-height: 26px;
+ 
+}
+.text{
+  font-size: 14px;
+  line-height: 22px;
+  color: $theme3;
+}

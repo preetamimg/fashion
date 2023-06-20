@@ -1,0 +1,213 @@
+// navbar 
+.navbar{
+    height: 110px;
+    // background: transparent !important;
+    backdrop-filter: blur(25px) !important;
+    & .logo{
+        height: 30px;
+        width: 153px;
+    }
+    & .offcanvas-body{
+        & .navbar-nav{
+            & .nav-item{
+                & .nav-link{
+                    padding-left: 60px !important;
+                    font-size: 16px;
+                    line-height: 24px;
+                    font-family: 'Poppins', sans-seri;
+                    transition: all 0.3s ease-in-out;
+                    &:hover{
+                        color: $theme1 !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@mixin navbar-mixin-min-sm() {}
+// Medium devices (tablets, 768px and up)
+@mixin navbar-mixin-min-md() {}
+// Large devices (desktops, 992px and up)
+@mixin navbar-mixin-min-lg() {}
+// X-Large devices (large desktops, 1200px and up)
+@mixin navbar-mixin-min-xl() {}
+// XX-Large devices (larger desktops, 1400px and up)
+@mixin navbar-mixin-min-xxl() {}
+
+// X-Large devices (large desktops, less than 1400px)
+@mixin navbar-mixin-max-xl() {
+    .navbar{
+       
+        & .logo{
+           
+        }
+        & .offcanvas-body{
+            & .navbar-nav{
+                & .nav-item{
+                    & .nav-link{
+                       
+                        &:hover{
+                        
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Large devices (desktops, less than 1200px)
+@mixin navbar-mixin-max-lg() {
+    .navbar{
+       
+        & .logo{
+           
+        }
+        & .offcanvas{
+            width: 288px;
+            height: 500px;
+            bottom: 0;
+            & .offcanvas-body{
+                & .navbar-nav{
+                    & .nav-item{
+                        & .nav-link{
+                           
+                            &:hover{
+                            
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Medium devices (tablets, less than 992px)
+@mixin navbar-mixin-max-md() {
+    .navbar{
+        height: 85px;
+        & .logo{
+           
+        }
+        & .offcanvas{
+            width: 288px;
+            height: 591px;
+            bottom: 0;
+            & .offcanvas-header{
+                & .offcanvas-logo {
+                    & .logo{
+                        width: 100px;
+                    }
+                }
+                & .btn-close {
+
+                    filter:invert(1);
+                }
+            }
+            & .offcanvas-body{
+                & .navbar-nav{
+                    & .nav-item{
+                        & .nav-link{
+                           padding-left: 0 !important;
+                            &:hover{
+                            
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+// Small devices (landscape phones, less than 768px)
+@mixin navbar-mixin-max-sm() {
+    .navbar{
+       
+        & .logo{
+           
+        }
+        & .offcanvas-body{
+            & .navbar-nav{
+                & .nav-item{
+                    & .nav-link{
+                       
+                        &:hover{
+                        
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+// X-Small devices (portrait phones, less than 576px)
+@mixin navbar-mixin-max-xs() {
+    .navbar{
+       height: 90px;
+        & .logo{
+            width: 126px;
+        }
+        & .offcanvas-body{
+            & .navbar-nav{
+                & .nav-item{
+                    & .nav-link{
+                       
+                        &:hover{
+                        
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+@mixin navbar-mixin-max-420px(){
+    .navbar{
+        height: 60px;
+         & .logo{
+             width: 100px;
+         
+         }
+             & .offcanvas-body{
+                 & .navbar-nav{
+                     & .nav-item{
+                         & .nav-link{
+                           
+                             &:hover{
+                             
+                             }
+                         }
+                     }
+                 }
+             }
+         
+     }
+}
+@mixin offcanvas-mixin-max-420px(){
+    .offcanvas{
+        & .offcanvas-header{
+            & .logo{
+                width: 100px;
+            
+            }
+        }
+             & .offcanvas-body{
+                 & .navbar-nav{
+                     & .nav-item{
+                         & .nav-link{
+                           font-size: 14px;
+                             &:hover{
+                             
+                             }
+                         }
+                     }
+                 }
+             }
+         
+     }
+}
