@@ -1,0 +1,115 @@
+.termscondition {
+    & .termsheading {
+        font-size: 60px;
+        color: $black;
+    }
+    & .terms-text {
+        font-size: 14px;
+        color: $black;
+    }
+}
+
+// // Small devices (landscape phones, 576px and up)
+@mixin termscondition-mixin-min-sm() {
+    .termscondition {
+        & .termsheading {
+        }
+        & .terms-text {
+        }
+    }
+}
+// Medium devices (tablets, 768px and up)
+@mixin termscondition-mixin-min-md() {
+    .termscondition {
+        & .termsheading {
+        }
+        & .terms-text {
+        }
+    }
+}
+// Large devices (desktops, 992px and up)
+@mixin termscondition-mixin-min-lg() {
+    .termscondition {
+        & .termsheading {
+        }
+        & .terms-text {
+        }
+    }
+}
+// X-Large devices (large desktops, 1200px and up)
+@mixin termscondition-mixin-min-xl() {
+    .termscondition {
+        & .termsheading {
+        }
+        & .terms-text {
+        }
+    }
+}
+// XX-Large devices (larger desktops, 1400px and up)
+@mixin termscondition-mixin-min-xxl() {
+    .termscondition {
+        & .follow-heading {
+            & .follow-staricon {
+            }
+        }
+        & .followimg {
+            &:hover {
+            }
+        }
+        & .owl-stage-outer {
+        }
+    }
+    }
+
+// X-Large devices (large desktops, less than 1400px)
+ @mixin termscondition-mixin-max-xl() {
+    .termscondition {
+        & .termsheading {
+        }
+        & .terms-text {
+        }
+    }
+}
+// Large devices (desktops, less than 1200px)
+@mixin termscondition-mixin-max-lg() {
+    .termscondition {
+        & .termsheading {
+            font-size: 54px;
+        }
+        & .terms-text {
+        }
+    }
+}
+// Medium devices (tablets, less than 992px)
+@mixin termscondition-mixin-max-md() {
+    .termscondition {
+        & .termsheading {
+            font-size: 46px;
+        }
+        & .terms-text {
+            font-size: 13px;
+        }
+    }
+}
+// Small devices (landscape phones, less than 768px)
+@mixin termscondition-mixin-max-sm() {
+    .termscondition {
+        & .termsheading {
+            font-size: 38px;
+        }
+        & .terms-text {
+            font-size: 12px;
+        }
+    }
+}
+// X-Small devices (portrait phones, less than 576px)
+@mixin termscondition-mixin-max-xs() {
+    .termscondition {
+        & .termsheading {
+            font-size: 30px;
+        }
+        & .terms-text {
+            font-size: 11px;
+        }
+    }
+}
