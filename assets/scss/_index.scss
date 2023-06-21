@@ -1,0 +1,505 @@
+.heroSection{
+ 
+    // height: 88vh;
+    height: calc(100vh - 80px);
+    width: 100%;
+    & .heroSectionowl{
+        & .owl-stage-outer{
+            padding: 0;
+            height: 100% !important;
+
+            & .owl-stage{
+                height: 100% !important;
+                & .owl-item{
+                    height: 100%  !important;
+                    & .item{
+                        background-color: $theme1;
+                        border: 3px solid $white;
+                        outline: 1px solid $theme1;
+                        & .heroContent {
+                            position: absolute;
+                            top: 50%;
+                            transform: translate(0,-50%);
+                            & .subheading{
+                                color:#A89D9C;
+                                position: relative;
+                                font-size: 16px;
+                                padding-left: 36px;
+                                &::before{
+                                    position: absolute;
+                                    content: '';
+                                    background-color: #A89D9C;
+                                    width: 30px;
+                                    height: 3px;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    left: 0;
+                                }
+                            }
+                            & .heading{
+                                font-weight: 200;
+                                & span{
+                                    font-weight: 600;
+                                }
+                            }
+                        } 
+                        & .heroImag {
+                            max-height: 100%;
+                            max-width: 400px;
+                          
+                        }
+                    }
+                }
+
+            }
+
+          
+        }
+        & .owl-dots{
+            display: flex;
+            position: absolute;
+            bottom: 60px;
+            left: 113px;
+            gap: 50px;
+            & .owl-dot{
+                width: 29px;
+                height: 29px;
+                z-index: 3;
+                font-size: 16px;
+                color: #A89D9C;
+                &.active{
+                    font-weight: 500 ;
+                    color: $black;
+                    font-size: 17px;
+                }
+                &:nth-child(1) {
+                    &::after {
+                        content: "01";
+                        position: absolute;
+                        top: 50%;
+                        transform: translate(-50%,-50%);
+                    }
+                    &::before{
+                        position: absolute;
+                        content:'';
+                        width: 40px;
+                        height: 3px;
+                        background-color: #A89D9C;
+                        left: 34px;
+                        transform: translateY(-50%);
+                    }
+                }
+                &:nth-child(2) {
+                    &::after {
+                        content: "02";
+                        position: absolute;
+                        top: 50%;
+                        transform: translate(-50%,-50%);
+                    }
+                    &::before{
+                        position: absolute;
+                        content:'';
+                        width: 40px;
+                        height: 3px;
+                        background-color: #A89D9C;
+                        left: 114px;
+                        transform: translateY(-50%);
+                    }
+                }
+                &:nth-child(3) {
+                    &::after {
+                        content: "03";
+                        position: absolute;
+                        top: 50%;
+                        transform: translate(-50%,-50%);
+                    }
+                }
+              
+            }
+        }
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@mixin heroSection-mixin-min-sm() {}
+// Medium devices (tablets, 768px and up)
+@mixin heroSection-mixin-min-md() {}
+// Large devices (desktops, 992px and up)
+@mixin heroSection-mixin-min-lg() {}
+// X-Large devices (large desktops, 1200px and up)
+@mixin heroSection-mixin-min-xl() {}
+// XX-Large devices (larger desktops, 1400px and up)
+@mixin heroSection-mixin-min-xxl() {}
+
+// X-Large devices (large desktops, less than 1400px)
+@mixin heroSection-mixin-max-xl() {}
+
+// Large devices (desktops, less than 1200px)
+@mixin heroSection-mixin-max-lg() {
+    .heroSection{
+        & .heroSectionowl{
+            & .owl-stage-outer{
+             
+    
+                & .owl-stage{
+                  
+                    & .owl-item{
+                    
+                        & .item{
+                         
+                            & .heroContent {
+                           
+                                & .subheading{
+                             
+                                    &::before{
+                               
+                                    }
+                                }
+                                & .heading{
+                                    font-size: 60px;
+                                    line-height: 66px;
+                                    & span{
+                                       
+                                    }
+                                }
+                            } 
+                            & .heroImag {
+                                
+                              
+                            }
+                        }
+                    }
+    
+                }
+              
+            }
+            & .owl-dots{
+            
+                & .owl-dot{
+                
+                    &.active{
+                       
+                    }
+                    &:nth-child(1) {
+                        &::after {
+                     
+                        }
+                        &::before{
+                     
+                        }
+                    }
+                    &:nth-child(2) {
+                        &::after {
+                  
+                        }
+                        &::before{
+                        
+                        }
+                    }
+                    &:nth-child(3) {
+                        &::after {
+                         
+                        }
+                    }
+                  
+                }
+            }
+        }
+    }
+}
+// Medium devices (tablets, less than 992px)
+@mixin heroSection-mixin-max-md() {
+    .heroSection{
+        height:400px;
+        & .heroSectionowl{
+            & .owl-stage-outer{
+             
+    
+                & .owl-stage{
+                  
+                    & .owl-item{
+                    
+                        & .item{
+                        
+                            & .heroContent {
+                           
+                                & .subheading{
+                             
+                                    &::before{
+                               
+                                    }
+                                }
+                                & .heading{
+                                    font-size: 40px;
+                                    line-height: 49px;
+                                    & span{
+                                       
+                                    }
+                                }
+                            } 
+                         
+                        }
+                    }
+    
+                }
+              
+            }
+            & .owl-dots{
+            
+                & .owl-dot{
+                
+                    &.active{
+                       
+                    }
+                    &:nth-child(1) {
+                        &::after {
+                     
+                        }
+                        &::before{
+                     
+                        }
+                    }
+                    &:nth-child(2) {
+                        &::after {
+                  
+                        }
+                        &::before{
+                        
+                        }
+                    }
+                    &:nth-child(3) {
+                        &::after {
+                         
+                        }
+                    }
+                  
+                }
+            }
+        }
+    }
+    
+}
+// Small devices (landscape phones, less than 768px)
+@mixin heroSection-mixin-max-sm() {
+    .heroSection{
+        height:300px;
+        & .heroSectionowl{
+            & .owl-stage-outer{
+             
+    
+                & .owl-stage{
+                  
+                    & .owl-item{
+                    
+                        & .item{
+                         
+                            & .heroContent {
+                           
+                                & .subheading{
+                                    font-size: 14px;
+                                    &::before{
+                                       
+                                    }
+                                }
+                                & .heading{
+                                    font-size: 28px;
+                                    line-height: 37px;
+                               & br{
+                                display: none;
+                               }
+                                    & span{
+                                       
+                                    }
+                                }
+                            } 
+                            & .heroImag{
+                                
+                            }
+                        }
+                    }
+    
+                }
+              
+            }
+            & .owl-dots{
+                left: 56px;
+                bottom: 20px;
+                & .owl-dot{
+                  
+                    &.active{
+                       
+                    }
+                    &:nth-child(1) {
+                        &::after {
+                     
+                        }
+                        &::before{
+                     
+                        }
+                    }
+                    &:nth-child(2) {
+                        &::after {
+                  
+                        }
+                        &::before{
+                        
+                        }
+                    }
+                    &:nth-child(3) {
+                        &::after {
+                         
+                        }
+                    }
+                  
+                }
+            }
+        }
+    }
+    
+}
+// X-Small devices (portrait phones, less than 576px)
+@mixin heroSection-mixin-max-xs() {
+ 
+    .heroSection{
+        height: 280px;
+        & .heroSectionowl{
+            & .owl-stage-outer{
+             
+    
+                & .owl-stage{
+                  
+                    & .owl-item{
+                    
+                        & .item{
+                         
+                            & .heroContent {
+                           
+                                & .subheading{
+                                    font-size: 12px;
+                                    &::before{
+                               
+                                    }
+                                }
+                                & .heading{
+                                    font-size: 18px;
+                                    line-height: 27px;
+                                    & span{
+                                       
+                                    }
+                                }
+                                & .heroBtn{
+                                    font-size: 13px;
+                                }
+                            } 
+                        }
+                    }
+    
+                }
+              
+            }
+            & .owl-dots{
+                bottom: 15px;
+                left: 24px;
+                & .owl-dot{
+                font-size: 13px;
+                    &.active{
+                       font-size: 14px;
+                    }
+                    &:nth-child(1) {
+                        &::after {
+                     
+                        }
+                        &::before{
+                     
+                        }
+                    }
+                    &:nth-child(2) {
+                        &::after {
+                  
+                        }
+                        &::before{
+                        
+                        }
+                    }
+                    &:nth-child(3) {
+                        &::after {
+                         
+                        }
+                    }
+                  
+                }
+            }
+        }
+    }
+}
+
+@mixin heroSection-mixin-max-468px(){
+    .heroSection{
+        & .heroSectionowl{
+            & .owl-stage-outer{
+                & .owl-stage{
+                    & .owl-item{
+                    
+                        & .item{
+                            & .col-7{
+                                width: 100%;
+
+                                & .heroContent {
+                               
+                                    & .subheading{
+                                 
+                                        &::before{
+                                   
+                                        }
+                                    }
+                                    & .heading{
+                                   
+                                        & span{
+                                           
+                                        }
+                                    }
+                                } 
+                            }
+                            & .heroImag{
+                                display: none;
+                            }
+                        }
+                    }
+    
+                }
+              
+            }
+            & .owl-dots{
+                & .owl-dot{
+                
+                    &.active{
+                       
+                    }
+                    &:nth-child(1) {
+                        &::after {
+                     
+                        }
+                        &::before{
+                     
+                        }
+                    }
+                    &:nth-child(2) {
+                        &::after {
+                  
+                        }
+                        &::before{
+                        
+                        }
+                    }
+                    &:nth-child(3) {
+                        &::after {
+                         
+                        }
+                    }
+                  
+                }
+            }
+        }
+    }
+}
+
