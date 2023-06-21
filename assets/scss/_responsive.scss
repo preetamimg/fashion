@@ -5,6 +5,8 @@
 @media (min-width: 576px) {
     @include navbar-mixin-min-sm();
     @include heroSection-mixin-min-sm();
+    @include main-mixin-min-sm();
+    @include pageHeading-mixin-min-sm();
 
 
 
@@ -15,6 +17,8 @@
 @media (min-width: 768px) {
   @include navbar-mixin-min-md();
   @include heroSection-mixin-min-md();
+  @include main-mixin-min-md();
+  @include pageHeading-mixin-min-md();
 
 
 
@@ -24,6 +28,8 @@
 @media (min-width: 992px) {
   @include navbar-mixin-min-lg();
   @include heroSection-mixin-min-lg();
+  @include main-mixin-min-lg();
+  @include pageHeading-mixin-min-lg();
 
 
 
@@ -33,6 +39,8 @@
 @media (min-width: 1200px) {
   @include navbar-mixin-min-xl();  
   @include heroSection-mixin-min-xl();  
+  @include main-mixin-min-xl();  
+  @include pageHeading-mixin-min-xl();  
 
 
 
@@ -42,6 +50,8 @@
 @media (min-width: 1400px) {
   @include navbar-mixin-min-xxl();
   @include heroSection-mixin-min-xxl();
+  @include main-mixin-min-xxl();
+  @include pageHeading-mixin-min-xxl();
 
 
 
@@ -51,16 +61,16 @@
 @media (max-width: 1399.98px) {
   @include navbar-mixin-max-xl();
   @include heroSection-mixin-max-xl();
-
-
-
-
+  @include main-mixin-max-xl();
+  @include pageHeading-mixin-max-xl();
 }
 
 // Large devices (desktops, less than 1200px)
 @media (max-width: 1199.98px) {
   @include navbar-mixin-max-lg(); 
   @include heroSection-mixin-max-lg(); 
+  @include main-mixin-max-lg(); 
+  @include pageHeading-mixin-max-lg(); 
  
 
 
@@ -70,6 +80,8 @@
 @media (max-width: 991.98px) {
   @include navbar-mixin-max-md();
   @include heroSection-mixin-max-md();
+  @include main-mixin-max-md();
+  @include pageHeading-mixin-max-md();
 
 
 
@@ -79,6 +91,8 @@
 @media (max-width: 767.98px) {
   @include navbar-mixin-max-sm();
   @include heroSection-mixin-max-sm();
+  @include main-mixin-max-sm();
+  @include pageHeading-mixin-max-sm();
   
 
 
@@ -88,6 +102,8 @@
 @media (max-width: 575.98px) {
   @include navbar-mixin-max-xs();
   @include heroSection-mixin-max-xs();
+  @include main-mixin-max-xs();
+  @include pageHeading-mixin-max-xs();
 }
 
 

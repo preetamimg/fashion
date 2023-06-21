@@ -1,5 +1,4 @@
 
-
 ::-webkit-scrollbar-track {
   // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
   background-color: rgba($black, 0);
@@ -49,6 +48,7 @@ body {
           font-size: 15px;
           color: lighten($black, 65);
           transition: all 0.3s ease-in-out;
+          white-space: nowrap;
           &::before {
               content: '';
               position: absolute;
@@ -73,8 +73,33 @@ body {
           }
       }
   }
+  // & .nav-tabs {
+  //   // gap: 50px;
+  //   & .nav-link {
+  //     color: lighten($black, 50);
+  //     &::before {
+  //       content: '';
+  //       position: absolute;
+  //       bottom: -3px;
+  //       left: 0;
+  //       width: 0;
+  //       height: 2px;
+  //       background-color: $black;
+  //       transition: all 0.3s ease-in-out;
+  //     }
+  //     &:active {
+  //       border: 0;
+  //       color: $black;
+  //       &::before {
+  //         width: 85%;
+  //       }
+  //     }
+  //   }
+  // }
 }
 // Top Collection end
+
+// card section start
 .shop-card {
   & .shopcard-img {
     & .shopcard-icon {
@@ -103,12 +128,107 @@ body {
     font-size: 14px;
     color: lighten($black, 60);
   }
-  & .addtofav {
-
+  & .like-icon {
+    height: 16px;
+    width: 16px;
   }
   & .item-name {
     font-size: 16px;
     font-weight: 500;
+  }
+  .add-to-cart-button {
+    background: $black;
+    color: $white;
+    transition:all 0.4s ease;
+    font-size: 14px;
+    &:active {
+        -webkit-transform: translateY(4px);
+        transform: translateY(4px);
+    }
+    &:hover,
+    &:focus {
+        -webkit-transform: translateY(-1px);
+        transform: translateY(-1px);
+    }
+    &.added {
+        background: $black;
+        .add-to-cart {
+            display: none;
+        }
+        .added-to-cart {
+            display: block;
+        }
+        .cart-icon {
+            animation: drop 0.3s forwards;
+            -webkit-animation: drop 0.3s forwards;
+            animation-delay: 0.18s;
+        }
+        .box-1,
+        .box-2 {
+            top: 18px;
+        }
+        .tick {
+            animation: grow 0.6s forwards;
+            -webkit-animation: grow 0.6s forwards;
+            animation-delay: 0.7s;
+        }
+    }
+    .added-to-cart {
+      display: none;
+      position: relative;
+    }
+    .add-to-cart-box {
+      height: 5px;
+      position: absolute;
+      top: 0;
+      width: 5px;
+    }
+    .box-1,
+    .box-2 {
+      transition: 0.4s ease;
+      top: -8px;
+    }
+    .box-1 {
+      left: 23px;
+      transform: rotate(45deg);
+    }
+    .box-2 {
+      left: 32px;
+      transform: rotate(63deg);
+    }
+    .cart-icon {
+      left: 15px;
+      position: absolute;
+      top: 8px;
+    }
+    .tick {
+      background: lighten($success, 50);
+      border-radius: 50%;
+      position: absolute;
+      left: 28px;
+      transform: scale(0);
+      top: 5px;
+      z-index: 2;
+    }
+    
+    @-webkit-keyframes grow {
+      0% {-webkit-transform: scale(0);}
+      50% {-webkit-transform: scale(1.2);}
+      100% {-webkit-transform: scale(1);}
+    }
+    @keyframes grow {
+      0% {transform: scale(0);}
+      50% {transform: scale(1.2);}
+      100% {transform: scale(1);}
+    }
+    @-webkit-keyframes drop {
+      0% {-webkit-transform: translateY(0px);}
+      100% {-webkit-transform: translateY(1px);}
+    }
+    @keyframes drop {
+      0% {transform: translateY(0px);}
+      100% {transform: translateY(1px);}
+    }
   }
   & .price {
     font-size: 14px;
@@ -122,47 +242,854 @@ body {
       bottom: 0;
     }
   }
-  & .swiper-button-next {
-    color: $black !important;
+}
+.owl-nav {
+  position: absolute;
+  top: 40%;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  & .owl-prev {
+    position: absolute;
+    left: -20px;
+  }
+  & .owl-next {
+    position: absolute;
+    right: -20px;
   }
 }
-.swiper-btn {
-  color: $black;
-  font-size: 10px;
- }
-
-
+.owl-stage-outer {
+  padding: 0;
+}
+.feature-collection2 {
+  & .shopcard-icon {
+    aspect-ratio: 7/5 !important;
+  }
+}
 
 
 // Small devices (landscape phones, 576px and up)
 @mixin main-mixin-min-sm() {
+  // shop card section start
+  .shop-card {
+    & .shopcard-img {
+      & .shopcard-icon {
+        aspect-ratio: 4/5;
+        object-position: top center;
+      }
+    }
+    & .cartbtn-main {
+        &:hover {
+        }
+      }
 
+    & .card-title {
+    }
+    & .like-icon {
+    }
+    & .item-name {
+    }
+    .add-to-cart-button {
+      &:active {
+      }
+      &:hover,
+      &:focus {
+      }
+      &.added {
+          .add-to-cart {
+          }
+          .added-to-cart {
+          }
+          .cart-icon {
+          }
+          .box-1,
+          .box-2 {
+          }
+          .tick {
+          }
+      }
+      .added-to-cart {
+      }
+      .add-to-cart-box {
+      }
+      .box-1,
+      .box-2 {
+      }
+      .box-1 {
+      }
+      .box-2 {
+      }
+      .cart-icon {
+      }
+      .tick {
+      }
+    }
+    & .price {
+    }
+    &:hover {
+      & .cartbtn-main {
+      }
+    }
+  }
+  // shop card section end
+
+  // top collection section start
+  .top-categories {
+    & .categories-item {
+        & .categories-icon {
+        }
+        &:hover {
+            & .categories-icon {
+            }
+        }
+    }
+    & .categories-title {
+    }
+  }
+  // top collection section end
 }
 // Medium devices (tablets, 768px and up)
 @mixin main-mixin-min-md() {
+  // shop card section start
+  .shop-card {
+    & .shopcard-img {
+      & .shopcard-icon {
+        aspect-ratio: 4/5;
+        object-position: top center;
+      }
+    }
+    & .cartbtn-main {
+        &:hover {
+        }
+      }
+
+    & .card-title {
+    }
+    & .like-icon {
+    }
+    & .item-name {
+    }
+    .add-to-cart-button {
+      &:active {
+      }
+      &:hover,
+      &:focus {
+      }
+      &.added {
+          .add-to-cart {
+          }
+          .added-to-cart {
+          }
+          .cart-icon {
+          }
+          .box-1,
+          .box-2 {
+          }
+          .tick {
+          }
+      }
+      .added-to-cart {
+      }
+      .add-to-cart-box {
+      }
+      .box-1,
+      .box-2 {
+      }
+      .box-1 {
+      }
+      .box-2 {
+      }
+      .cart-icon {
+      }
+      .tick {
+      }
+    }
+    & .price {
+    }
+    &:hover {
+      & .cartbtn-main {
+      }
+    }
+  }
+  // shop card section end
+
+  // top collection section start
+  .top-categories {
+    & .categories-item {
+        & .categories-icon {
+        }
+        &:hover {
+            & .categories-icon {
+            }
+        }
+    }
+    & .categories-title {
+    }
+  }
+  // top collection section end
 }
 // Large devices (desktops, 992px and up)
 @mixin main-mixin-min-lg() {
+  // shop card section start
+  .shop-card {
+    & .shopcard-img {
+      & .shopcard-icon {
+        aspect-ratio: 4/5;
+        object-position: top center;
+      }
+    }
+    & .cartbtn-main {
+        &:hover {
+        }
+      }
+
+    & .card-title {
+    }
+    & .like-icon {
+    }
+    & .item-name {
+    }
+    .add-to-cart-button {
+      &:active {
+      }
+      &:hover,
+      &:focus {
+      }
+      &.added {
+          .add-to-cart {
+          }
+          .added-to-cart {
+          }
+          .cart-icon {
+          }
+          .box-1,
+          .box-2 {
+          }
+          .tick {
+          }
+      }
+      .added-to-cart {
+      }
+      .add-to-cart-box {
+      }
+      .box-1,
+      .box-2 {
+      }
+      .box-1 {
+      }
+      .box-2 {
+      }
+      .cart-icon {
+      }
+      .tick {
+      }
+    }
+    & .price {
+    }
+    &:hover {
+      & .cartbtn-main {
+      }
+    }
+  }
+  // shop card section end
+
+  // top collection section start
+  .top-categories {
+    & .categories-item {
+        & .categories-icon {
+        }
+        &:hover {
+            & .categories-icon {
+            }
+        }
+    }
+    & .categories-title {
+    }
+  }
+  // top collection section end
 }
 // X-Large devices (large desktops, 1200px and up)
 @mixin main-mixin-min-xl() {
+  // shop card section start
+  .shop-card {
+    & .shopcard-img {
+      & .shopcard-icon {
+        aspect-ratio: 4/5;
+        object-position: top center;
+      }
+    }
+    & .cartbtn-main {
+        &:hover {
+        }
+      }
+
+    & .card-title {
+    }
+    & .like-icon {
+    }
+    & .item-name {
+    }
+    .add-to-cart-button {
+      &:active {
+      }
+      &:hover,
+      &:focus {
+      }
+      &.added {
+          .add-to-cart {
+          }
+          .added-to-cart {
+          }
+          .cart-icon {
+          }
+          .box-1,
+          .box-2 {
+          }
+          .tick {
+          }
+      }
+      .added-to-cart {
+      }
+      .add-to-cart-box {
+      }
+      .box-1,
+      .box-2 {
+      }
+      .box-1 {
+      }
+      .box-2 {
+      }
+      .cart-icon {
+      }
+      .tick {
+      }
+    }
+    & .price {
+    }
+    &:hover {
+      & .cartbtn-main {
+      }
+    }
+  }
+  // shop card section end
+
+  // top collection section start
+  .top-categories {
+    & .categories-item {
+        & .categories-icon {
+        }
+        &:hover {
+            & .categories-icon {
+            }
+        }
+    }
+    & .categories-title {
+    }
+  }
+  // top collection section end
 }
 // XX-Large devices (larger desktops, 1400px and up)
 @mixin main-mixin-min-xxl() {
+  // shop card section start
+  .shop-card {
+    & .shopcard-img {
+      & .shopcard-icon {
+        aspect-ratio: 4/5;
+        object-position: top center;
+      }
+    }
+    & .cartbtn-main {
+        &:hover {
+        }
+      }
+
+    & .card-title {
+    }
+    & .like-icon {
+    }
+    & .item-name {
+    }
+    .add-to-cart-button {
+      &:active {
+      }
+      &:hover,
+      &:focus {
+      }
+      &.added {
+          .add-to-cart {
+          }
+          .added-to-cart {
+          }
+          .cart-icon {
+          }
+          .box-1,
+          .box-2 {
+          }
+          .tick {
+          }
+      }
+      .added-to-cart {
+      }
+      .add-to-cart-box {
+      }
+      .box-1,
+      .box-2 {
+      }
+      .box-1 {
+      }
+      .box-2 {
+      }
+      .cart-icon {
+      }
+      .tick {
+      }
+    }
+    & .price {
+    }
+    &:hover {
+      & .cartbtn-main {
+      }
+    }
+  }
+  // shop card section end
+
+  // top collection section start
+  .top-categories {
+    & .categories-item {
+        & .categories-icon {
+        }
+        &:hover {
+            & .categories-icon {
+            }
+        }
+    }
+    & .categories-title {
+    }
+  }
+  // top collection section end
 }
 // X-Large devices (large desktops, less than 1400px)
 @mixin main-mixin-max-xl() {
+  // shop card section start
+  .shop-card {
+    & .shopcard-img {
+      & .shopcard-icon {
+        aspect-ratio: 4/5;
+        object-position: top center;
+      }
+    }
+    & .cartbtn-main {
+        &:hover {
+        }
+      }
+
+    & .card-title {
+    }
+    & .like-icon {
+    }
+    & .item-name {
+    }
+    .add-to-cart-button {
+      &:active {
+      }
+      &:hover,
+      &:focus {
+      }
+      &.added {
+          .add-to-cart {
+          }
+          .added-to-cart {
+          }
+          .cart-icon {
+          }
+          .box-1,
+          .box-2 {
+          }
+          .tick {
+          }
+      }
+      .added-to-cart {
+      }
+      .add-to-cart-box {
+      }
+      .box-1,
+      .box-2 {
+      }
+      .box-1 {
+      }
+      .box-2 {
+      }
+      .cart-icon {
+      }
+      .tick {
+      }
+    }
+    & .price {
+    }
+    &:hover {
+      & .cartbtn-main {
+      }
+    }
+  }
+  // shop card section end
+
+  // top collection section start
+  .top-categories {
+    & .categories-item {
+        & .categories-icon {
+        }
+        &:hover {
+            & .categories-icon {
+            }
+        }
+    }
+    & .categories-title {
+    }
+  }
+  // top collection section end
 }
 // Large devices (desktops, less than 1200px)
 @mixin main-mixin-max-lg() {
+  // shop card section start
+  .shop-card {
+    & .shopcard-img {
+      & .shopcard-icon {
+      }
+    }
+    & .cartbtn-main {
+        &:hover {
+        }
+      }
+
+    & .card-title {
+    }
+    & .like-icon {
+    }
+    & .item-name {
+    }
+    .add-to-cart-button {
+      &:active {
+      }
+      &:hover,
+      &:focus {
+      }
+      &.added {
+          .add-to-cart {
+          }
+          .added-to-cart {
+          }
+          .cart-icon {
+          }
+          .box-1,
+          .box-2 {
+          }
+          .tick {
+          }
+      }
+      .added-to-cart {
+      }
+      .add-to-cart-box {
+      }
+      .box-1,
+      .box-2 {
+      }
+      .box-1 {
+      }
+      .box-2 {
+      }
+      .cart-icon {
+      }
+      .tick {
+      }
+    }
+    & .price {
+    }
+    &:hover {
+      & .cartbtn-main {
+      }
+    }
+  }
+  // shop card section end
+
+  // top collection section start
+  .top-categories {
+    & .categories-item {
+      height: 75px;
+      width: 75px;
+        & .categories-icon {
+        }
+        &:hover {
+            & .categories-icon {
+              font-size: 17px;
+            }
+        }
+    }
+    & .categories-title {
+    }
+  }
+  // top collection section end
 }
 // Medium devices (tablets, less than 992px)
 @mixin main-mixin-max-md() {
+  // shop card section start
+  .shop-card {
+    & .shopcard-img {
+      & .shopcard-icon {
+      }
+    }
+    & .cartbtn-main {
+        &:hover {
+        }
+      }
+
+    & .card-title {
+    }
+    & .like-icon {
+    }
+    & .item-name {
+    }
+    .add-to-cart-button {
+      &:active {
+      }
+      &:hover,
+      &:focus {
+      }
+      &.added {
+          .add-to-cart {
+          }
+          .added-to-cart {
+          }
+          .cart-icon {
+          }
+          .box-1,
+          .box-2 {
+          }
+          .tick {
+          }
+      }
+      .added-to-cart {
+      }
+      .add-to-cart-box {
+      }
+      .box-1,
+      .box-2 {
+      }
+      .box-1 {
+      }
+      .box-2 {
+      }
+      .cart-icon {
+      }
+      .tick {
+      }
+    }
+    & .price {
+    }
+    &:hover {
+      & .cartbtn-main {
+      }
+    }
+  }
+  // shop card section end
+
+  // top collection section start
+  .top-categories {
+    & .categories-item {
+      height: 70px;
+      width: 70px;
+        & .categories-icon {
+        }
+        &:hover {
+            & .categories-icon {
+            }
+        }
+    }
+    & .categories-title {
+      font-size: 16px;
+    }
+  }
+  // top collection section end
 }
 // Small devices (landscape phones, less than 768px)
 @mixin main-mixin-max-sm() {
+  // shop card section start
+  .shop-card {
+    & .shopcard-img {
+      & .shopcard-icon {
+      }
+    }
+    & .cartbtn-main {
+        &:hover {
+        }
+      }
+
+    & .card-title {
+    }
+    & .like-icon {
+    }
+    & .item-name {
+    }
+    .add-to-cart-button {
+      &:active {
+      }
+      &:hover,
+      &:focus {
+      }
+      &.added {
+          .add-to-cart {
+          }
+          .added-to-cart {
+          }
+          .cart-icon {
+          }
+          .box-1,
+          .box-2 {
+          }
+          .tick {
+          }
+      }
+      .added-to-cart {
+      }
+      .add-to-cart-box {
+      }
+      .box-1,
+      .box-2 {
+      }
+      .box-1 {
+      }
+      .box-2 {
+      }
+      .cart-icon {
+      }
+      .tick {
+      }
+    }
+    & .price {
+    }
+    &:hover {
+      & .cartbtn-main {
+      }
+    }
+  }
+  // shop card section end
+
+  // top categories section start
+  .top-categories {
+    & .categories-item {
+      height: 60px;
+      width: 60px;
+
+        & .categories-icon {
+        }
+        &:hover {
+            & .categories-icon {
+            }
+        }
+    }
+    & .categories-title {
+      font-size: 15px;
+    }
+  }
+  // top categories section end
 }
 // X-Small devices (portrait phones, less than 576px)
 @mixin main-mixin-max-xs() {
+  // shop card section start
+  .shop-card {
+    & .shopcard-img {
+      aspect-ratio: 5/5;
+      & .shopcard-icon {
+      }
+    }
+    & .cartbtn-main {
+        &:hover {
+        }
+      }
 
-}
+    & .card-title {
+    }
+    & .like-icon {
+    }
+    & .item-name {
+    }
+    .add-to-cart-button {
+      &:active {
+      }
+      &:hover,
+      &:focus {
+      }
+      &.added {
+          .add-to-cart {
+          }
+          .added-to-cart {
+          }
+          .cart-icon {
+          }
+          .box-1,
+          .box-2 {
+          }
+          .tick {
+          }
+      }
+      .added-to-cart {
+      }
+      .add-to-cart-box {
+      }
+      .box-1,
+      .box-2 {
+      }
+      .box-1 {
+      }
+      .box-2 {
+      }
+      .cart-icon {
+      }
+      .tick {
+      }
+    }
+    & .price {
+    }
+    &:hover {
+      & .cartbtn-main {
+      }
+    }
+  }
+  // shop card section end
+
+  // top categories section start
+  .top-categories {
+    & .categories-item {
+      height: 55px;
+      width: 55px;
+      padding:12px;
+        & .categories-icon {
+        }
+        &:hover {
+            & .categories-icon {
+            }
+        }
+    }
+    & .categories-title {
+      font-size: 14px;
+    }
+  }
+  // top categories section end
+
+  // Top Collection start
+  .top-collection {
+    & .topcollection-tab {
+        & .topcollection-link {
+            &::before {
+            }
+            &:active {
+                &::before {
+                }
+            }
+            &:hover {
+                &::before {
+                }
+            }
+        }
+    }
+  }
+  }
