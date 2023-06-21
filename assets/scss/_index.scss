@@ -132,76 +132,8 @@
 @mixin heroSection-mixin-min-xxl() {}
 
 // X-Large devices (large desktops, less than 1400px)
-@mixin heroSection-mixin-max-xl() {
-    .heroSection{
-     
-        & .logo{
-           
-        }
-        & .offcanvas-body{
-            & .heroSection-nav{
-                & .nav-item{
-                    & .nav-link{
-                       
-                        &:hover{
-                        
-                        }
-                    }
-// top-categories start
-.top-categories {
-    & .categories-item {
-        height: 80px;
-        width: 80px;
-        padding: 16px;
-        & .categories-icon {
-            transition: all 0.3s ease-in-out;
-        }
-        &:hover {
-            & .categories-icon {
-                transform: scale(1.2);
-            }
-        }
-    }
-    & .categories-title {
-        font-size: 18px;
-        color: lighten($black, 30);
-    }
-}
-// top-categories end
+@mixin heroSection-mixin-max-xl() {}
 
-// Top Collection start
-.top-collection {
-    & .topcollection-tab {
-        gap: 50px;
-        & .topcollection-link {
-            font-size: 15px;
-            color: lighten($black, 65);
-            transition: all 0.3s ease-in-out;
-            &::before {
-                content: '';
-                position: absolute;
-                bottom: -3px;
-                left: 0;
-                width: 0;
-                height: 2px;
-                background-color: $black;
-                transition: all 0.3s ease-in-out;
-            }
-            &:active {
-                color: $black;
-                &::before {
-                    width: 85%;
-                }
-            }
-            &:hover {
-                color: $black;
-                &::before {
-                    width: 85%;
-                }
-            }
-        }
-    }
-}
 // Large devices (desktops, less than 1200px)
 @mixin heroSection-mixin-max-lg() {
     .heroSection{
@@ -571,14 +503,3 @@
     }
 }
 
-
-// lookBook
-
-.lookBook{
-    & .lookCard{
-        & .cardImage{
-           
-        }
-    }
-}
-// Top Collection end

@@ -88,7 +88,7 @@
 @media (max-width: 575.98px) {
   @include navbar-mixin-max-xs();
   @include heroSection-mixin-max-xs();
-
+}
 
 
 // Small devices (landscape phones, 576px and up)
@@ -166,9 +166,9 @@
 //   @include formSection-mixin-min-xl();
 //   @include faqsection-mixin-min-xl();
   // @include main-mixin-min-xl();
-// }
+}
 // // XX-Large devices (larger desktops, 1400px and up)
-// @media (min-width: 1400px) {
+@media (min-width: 1400px) {
   // @include heading-mixin-min-xxl();
   // @include btn-mixin-min-xxl();
   // @include navbar-mixin-min-xxl();
@@ -284,12 +284,6 @@
 // XX-Large devices (larger desktops)
 // No media query since the xxl breakpoint has no upper bound on its width
 
-@media (max-width: 468px){
+@media (max-width: 468px) {
   @include heroSection-mixin-max-468px();
 }
-
-
-
-
-
-
