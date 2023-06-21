@@ -1,6 +1,4 @@
 .heroSection{
- 
-    // height: 88vh;
     height: calc(100vh - 80px);
     width: 100%;
     & .heroSectionowl{
@@ -37,9 +35,17 @@
                                 }
                             }
                             & .heading{
+                                font-size: 69px;
+                                line-height: 74px;
                                 font-weight: 200;
                                 & span{
                                     font-weight: 600;
+                                }
+                            }
+                            & .heroBtn{
+                                & .icon{
+                                    width: 16px;
+                                    height: 16px;
                                 }
                             }
                         } 
@@ -442,7 +448,7 @@
                     
                         & .item{
                             & .col-7{
-                                width: 100%;
+                                // width: 100%;
 
                                 & .heroContent {
                                
@@ -461,7 +467,8 @@
                                 } 
                             }
                             & .heroImag{
-                                display: none;
+                                // display: none;
+                                max-width: 300px !important;
                             }
                         }
                     }
@@ -503,3 +510,532 @@
     }
 }
 
+
+
+// shippingSection
+
+.shippingSection{
+    & .shippingCard{
+        height: 380px;
+        transition: all 0.3s ease-in-out;
+        overflow: hidden;
+        &:hover{
+            & .card-body{
+                & .cardImage{
+                    transform: scale(1.1);
+                }
+            }
+        }
+    & .card-body{
+        & .cardImage{
+            max-width: 333px;
+            max-height: 363px;
+            position: absolute;
+            right: 0px;
+            bottom: 0;
+            transition: all 0.3s ease-in-out;
+            overflow: hidden;
+        }
+        & .cardContent{
+            position: absolute;
+            left: 20px;
+            bottom: 42px;
+            & .text{
+                color: lighten($black, 60);
+                font-size: 16px;
+                line-height: 22px;
+            }
+            & .heading{
+                font-size: 24px;
+                line-height: 32px;
+            }
+            & .heroBtn{
+                & .icon{
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+        }
+    }
+      
+
+    }
+
+    & .shippingCard1{
+        height: 250px;
+        transition: all 0.3s ease-in-out;
+        overflow: hidden;
+        &:hover{
+            & .card-body{
+                & .cardImage{
+                    transform: scale(1.1);
+                }
+            }
+        }
+    & .card-body{
+        & .cardImage{
+            max-width: 196px;
+            max-height: 363px;
+            position: absolute;
+            right: 37px;
+            bottom: 0;
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+        & .cardContent{
+            position: absolute;
+            left: 20px;
+            bottom: 30px;
+            & .text{
+                color: lighten($black, 60);
+                font-size: 16px;
+                line-height: 22px;
+            }
+            & .heading{
+                font-size: 24px;
+                line-height: 32px;
+            }
+            & .heroBtn{
+                & .icon{
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+        }
+    }
+      
+
+    }
+ 
+}
+
+
+// Small devices (landscape phones, 576px and up)
+@mixin shippingSection-mixin-min-sm() {}
+// Medium devices (tablets, 768px and up)
+@mixin shippingSection-mixin-min-md() {}
+// Large devices (desktops, 992px and up)
+@mixin shippingSection-mixin-min-lg() {}
+// X-Large devices (large desktops, 1200px and up)
+@mixin shippingSection-mixin-min-xl() {}
+// XX-Large devices (larger desktops, 1400px and up)
+@mixin shippingSection-mixin-min-xxl() {}
+
+// X-Large devices (large desktops, less than 1400px)
+@mixin shippingSection-mixin-max-xl() {
+    .shippingSection{
+        & .shippingCard{
+       
+            &:hover{
+                & .card-body{
+                    & .cardImage{
+                     
+                    }
+                }
+            }
+        & .card-body{
+            & .cardImage{
+           
+            }
+            & .cardContent{
+              
+                & .text{
+             
+                }
+                & .heading{
+                 
+                }
+                & .heroBtn{
+                    & .icon{
+                      
+                    }
+                }
+            }
+        }
+          
+    
+        }
+    
+        & .shippingCard1{
+         
+            &:hover{
+                & .card-body{
+                    & .cardImage{
+                     
+                    }
+                }
+            }
+        & .card-body{
+            & .cardImage{
+        
+            }
+            & .cardContent{
+           
+                & .text{
+                  
+                }
+                & .heading{
+                  
+                }
+                & .heroBtn{
+                    & .icon{
+                      
+                    }
+                }
+            }
+        }
+          
+    
+        }
+     
+    }
+}
+
+// Large devices (desktops, less than 1200px)
+@mixin shippingSection-mixin-max-lg() {
+    .shippingSection{
+        & .shippingCard{
+       
+            &:hover{
+                & .card-body{
+                    & .cardImage{
+                     
+                    }
+                }
+            }
+        & .card-body{
+            & .cardImage{
+           
+            }
+            & .cardContent{
+              
+                & .text{
+             
+                }
+                & .heading{
+                 
+                }
+                & .heroBtn{
+                    & .icon{
+                      
+                    }
+                }
+            }
+        }
+          
+    
+        }
+    
+        & .shippingCard1{
+         
+            &:hover{
+                & .card-body{
+                    & .cardImage{
+                     
+                    }
+                }
+            }
+        & .card-body{
+            & .cardImage{
+        
+            }
+            & .cardContent{
+           
+                & .text{
+                  
+                }
+                & .heading{
+                  
+                }
+                & .heroBtn{
+                    & .icon{
+                      
+                    }
+                }
+            }
+        }
+          
+    
+        }
+     
+    }
+}
+// Medium devices (tablets, less than 992px)
+@mixin shippingSection-mixin-max-md() {
+    .shippingSection{
+        & .shippingCard{
+       
+            &:hover{
+                & .card-body{
+                    & .cardImage{
+                     
+                    }
+                }
+            }
+        & .card-body{
+            & .cardImage{
+           
+            }
+            & .cardContent{
+              
+                & .text{
+             
+                }
+                & .heading{
+                 
+                }
+                & .heroBtn{
+                    & .icon{
+                      
+                    }
+                }
+            }
+        }
+          
+    
+        }
+    
+        & .shippingCard1{
+         
+            &:hover{
+                & .card-body{
+                    & .cardImage{
+                     
+                    }
+                }
+            }
+        & .card-body{
+            & .cardImage{
+        
+            }
+            & .cardContent{
+           
+                & .text{
+                  
+                }
+                & .heading{
+                  
+                }
+                & .heroBtn{
+                    & .icon{
+                      
+                    }
+                }
+            }
+        }
+          
+    
+        }
+     
+    }
+    
+}
+// Small devices (landscape phones, less than 768px)
+@mixin shippingSection-mixin-max-sm() {
+    .shippingSection{
+        & .shippingCard{
+       
+            &:hover{
+                & .card-body{
+                    & .cardImage{
+                     
+                    }
+                }
+            }
+        & .card-body{
+            & .cardImage{
+           
+            }
+            & .cardContent{
+              
+                & .text{
+             
+                }
+                & .heading{
+                 
+                }
+                & .heroBtn{
+                    & .icon{
+                      
+                    }
+                }
+            }
+        }
+          
+    
+        }
+    
+        & .shippingCard1{
+         
+            &:hover{
+                & .card-body{
+                    & .cardImage{
+                     
+                    }
+                }
+            }
+        & .card-body{
+            & .cardImage{
+        
+            }
+            & .cardContent{
+           
+                & .text{
+                  
+                }
+                & .heading{
+                  
+                }
+                & .heroBtn{
+                    & .icon{
+                      
+                    }
+                }
+            }
+        }
+          
+    
+        }
+     
+    }
+    
+}
+// X-Small devices (portrait phones, less than 576px)
+@mixin shippingSection-mixin-max-xs() {
+ 
+    .shippingSection{
+        & .shippingCard{
+       
+            &:hover{
+                & .card-body{
+                    & .cardImage{
+                     
+                    }
+                }
+            }
+        & .card-body{
+            & .cardImage{
+           
+            }
+            & .cardContent{
+              
+                & .text{
+             
+                }
+                & .heading{
+                 
+                }
+                & .heroBtn{
+                    & .icon{
+                      
+                    }
+                }
+            }
+        }
+          
+    
+        }
+    
+        & .shippingCard1{
+         
+            &:hover{
+                & .card-body{
+                    & .cardImage{
+                     
+                    }
+                }
+            }
+        & .card-body{
+            & .cardImage{
+        
+            }
+            & .cardContent{
+           
+                & .text{
+                  
+                }
+                & .heading{
+                  
+                }
+                & .heroBtn{
+                    & .icon{
+                      
+                    }
+                }
+            }
+        }
+          
+    
+        }
+     
+    }
+}
+
+@mixin shippingSection-mixin-max-468px(){
+    .shippingSection{
+        & .shippingCard{
+       
+            &:hover{
+                & .card-body{
+                    & .cardImage{
+                     
+                    }
+                }
+            }
+        & .card-body{
+            & .cardImage{
+           
+            }
+            & .cardContent{
+              
+                & .text{
+             
+                }
+                & .heading{
+                 
+                }
+                & .heroBtn{
+                    & .icon{
+                      
+                    }
+                }
+            }
+        }
+          
+    
+        }
+    
+        & .shippingCard1{
+         
+            &:hover{
+                & .card-body{
+                    & .cardImage{
+                     
+                    }
+                }
+            }
+        & .card-body{
+            & .cardImage{
+        
+            }
+            & .cardContent{
+           
+                & .text{
+                  
+                }
+                & .heading{
+                  
+                }
+                & .heroBtn{
+                    & .icon{
+                      
+                    }
+                }
+            }
+        }
+          
+    
+        }
+     
+    }
+}

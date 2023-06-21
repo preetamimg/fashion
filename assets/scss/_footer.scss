@@ -1,706 +1,674 @@
-// footer start
-.footer {
-    & .footer-logo {
-        height: auto;
-        width: 200px;
-    }
-    & .footer-icon {
-        height: 22px;
-        width: 22px;
-    }
-    & .footer-data {
-        font-size: 15px;
-        color: $white;
-    }
-    & .footer-detail {
-        font-size: 14px;
-        color: lighten($black,85);
-        font-weight: 400;
-        transition: all 0.3s ease-in-out;
-        &:hover {
-            color: $white;
-        }
-    }
-    & .subscibe-title {
+.footer{
+    & .footerHeading{
         font-size: 18px;
-        color: $white;
     }
-    // & .footer-title {
-    //     font-size: 15px;
-    //     color: $white;
-    // }
-    & .subscribe-main {
-        & .subscibe-input {
-            color: $white;
-            font-size: 14px;
-            &:focus {
-                border-color: $white;
-            }
-            &::placeholder {
-                color: $white !important;
-            }
-        }
-    }
-    & .footer-subheading {
-        font-size: 18px;
-        color: $theme1;
-        letter-spacing: 1px;
-    }
-    & .main-link {
+    & .text{
         font-size: 15px;
-        color: $white;
-        transition: all 0.3s ease-in-out;
-        &::before {
-            content:'';
-            position: absolute;
-            left: -10px;
-            top: 50%;
-            transform: translateY(-50%);
-            background: $theme1;
-            height: 8px;
-            width: 8px;
-            opacity: 0;
-            border-radius: 50%;
-            transition: all  0.3s ease-in-out;
-            visibility: hidden;
-        }
-        &:hover {
-            color: $theme1;
-            transform: translateX(6px);
-            &::before {
-                opacity: 1;
-                visibility: visible;
-            }
-        }
+        color: lighten($black, 60) !important;
     }
-    & .social-media {
-        & .social-link {
-            background-color: $theme1;
-            height: 45px;
-            width: 45px;
-            padding: 12px;
-            transition: all 0.3s ease-in-out;
-            & .social-img {
-                transition: all 0.3s ease-in-out;
-            }
-            &:hover {
-                border-radius: 50% !important;
-                & .social-img {
-                    filter: invert(1);
+    & .socialMedia{
+        & ul{
+            & li{
+                & .icon{
+                    width: 18px;
+                    height: 18px;
+                    transition: all 0.3s ease-in-out;
+                    &:hover{
+                        transform: scale(1.2);
+                    }
                 }
             }
-            
-        }
-        // & .slider {
-        //     position: absolute;
-        //     top: 0;
-        //     left: 51px;
-        //     width: 0;
-        //     height: 45px;
-        //     background: $theme1;
-        //     border-radius: 3px;
-        //     transition: all 0.5s 0.3s ease;
-           
-        // }
-    } 
-    & .copyright-title {
-        font-size: 13px;
-        color: $white;
-        & .img {
-            font-size: 13px;
-            color: $theme1;          
         }
     }
-    & .policy-title {
-        font-size: 13px;
-        color: $white;
-        transition: all 0.3s ease-in-out;
-        &:hover {
-            color: $theme1;
+    & .footerLink{
+        & ul{
+            & li{
+                & a{
+                    position: relative;
+                    transition: all 0.3s ease-in-out;
+                    &::before{
+                        position: absolute;
+                        content: '';
+                        background-color: white;
+                        height: 2px;
+                        width: 15px;
+                        left: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        opacity: 0;
+                        transition: all 0.3s ease-in-out;
+                    }
+                    &::after{
+                        position: absolute;
+                        content: '';
+                        background-color: white;
+                        height: 5px;
+                        width: 5px;
+                        left: 14px;
+                        border-radius: 50%;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        opacity: 0;
+                        transition: all 0.3s ease-in-out;
+                    }
+                    &:hover{
+                        padding-left: 22px;
+                        &::before{
+                            opacity: 10;
+                        }
+                        &::after{
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    & .icon{
+        width: 17px;
+        height: 17px;
+        color: lighten($black, 60) !important;
+    }
+    & .newsletter{
+        & .input-group{
+            & .form-control {
+                &::placeholder{
+                    font-size: 14px;
+                    color:$white;
+                }
+            }
         }
     }
 }
 
 // Small devices (landscape phones, 576px and up)
 @mixin footer-mixin-min-sm() {
-    .footer {
-        & .footer-logo {
+    .footer{
+        & .footerHeading{
+          
         }
-        & .footer-icon {
+        & .text{
+          
         }
-        & .footer-data {
-        }
-        & .footer-detail {
-            &:hover {
-            }
-        }
-        & .subscibe-title {
-        }
-        & .subscribe-main {
-            & .subscibe-input {
-                &:focus {
-                }
-                &::placeholder {
-                }
-            }
-        }
-        & .footer-subheading {
-        }
-        & .main-link {
-            &::before {
-            }
-            &:hover {
-                &::before {
-                }
-            }
-        }
-        & .social-media {
-            & .social-link {
-                & .social-img {
-                }
-                &:hover {
-                    & .social-img {
+        & .socialMedia{
+            & ul{
+                & li{
+                    & .icon{
+                  
+                        &:hover{
+                         
+                        }
                     }
                 }
-                
-            }
-        } 
-        & .copyright-title {
-            & .img {    
             }
         }
-        & .policy-title {
-            &:hover {
+        & .footerLink{
+            & ul{
+                & li{
+                    & a{
+                     
+                        &::before{
+                        
+                        }
+                        &::after{
+                    
+                        }
+                        &:hover{
+                         
+                            &::before{
+                         
+                            }
+                            &::after{
+                              
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & .icon{
+          
+        }
+        & .newsletter{
+            & .input-group{
+                & .form-control {
+                    &::placeholder{
+                      
+                    }
+                }
             }
         }
     }
 }
 // Medium devices (tablets, 768px and up)
 @mixin footer-mixin-min-md() {
-    .footer {
-        & .footer-logo {
+    .footer{
+        & .footerHeading{
+          
         }
-        & .footer-icon {
+        & .text{
+          
         }
-        & .footer-data {
-        }
-        & .footer-detail {
-            &:hover {
-            }
-        }
-        & .subscibe-title {
-        }
-        & .subscribe-main {
-            & .subscibe-input {
-                &:focus {
-                }
-                &::placeholder {
-                }
-            }
-        }
-        & .footer-subheading {
-        }
-        & .main-link {
-            &::before {
-            }
-            &:hover {
-                &::before {
-                }
-            }
-        }
-        & .social-media {
-            & .social-link {
-                & .social-img {
-                }
-                &:hover {
-                    & .social-img {
+        & .socialMedia{
+            & ul{
+                & li{
+                    & .icon{
+                  
+                        &:hover{
+                         
+                        }
                     }
                 }
-                
-            }
-        } 
-        & .copyright-title {
-            & .img {    
             }
         }
-        & .policy-title {
-            &:hover {
+        & .footerLink{
+            & ul{
+                & li{
+                    & a{
+                     
+                        &::before{
+                        
+                        }
+                        &::after{
+                    
+                        }
+                        &:hover{
+                         
+                            &::before{
+                         
+                            }
+                            &::after{
+                              
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & .icon{
+          
+        }
+        & .newsletter{
+            & .input-group{
+                & .form-control {
+                    &::placeholder{
+                      
+                    }
+                }
             }
         }
     }
 }
 // Large devices (desktops, 992px and up)
 @mixin footer-mixin-min-lg() {
-    .footer {
-        & .footer-logo {
+    .footer{
+        & .footerHeading{
+          
         }
-        & .footer-icon {
+        & .text{
+          
         }
-        & .footer-data {
-        }
-        & .footer-detail {
-            &:hover {
-            }
-        }
-        & .subscibe-title {
-        }
-        & .subscribe-main {
-            & .subscibe-input {
-                &:focus {
-                }
-                &::placeholder {
-                }
-            }
-        }
-        & .footer-subheading {
-        }
-        & .main-link {
-            &::before {
-            }
-            &:hover {
-                &::before {
-                }
-            }
-        }
-        & .social-media {
-            & .social-link {
-                & .social-img {
-                }
-                &:hover {
-                    & .social-img {
+        & .socialMedia{
+            & ul{
+                & li{
+                    & .icon{
+                  
+                        &:hover{
+                         
+                        }
                     }
                 }
-                
-            }
-        } 
-        & .copyright-title {
-            & .img {    
             }
         }
-        & .policy-title {
-            &:hover {
+        & .footerLink{
+            & ul{
+                & li{
+                    & a{
+                     
+                        &::before{
+                        
+                        }
+                        &::after{
+                    
+                        }
+                        &:hover{
+                         
+                            &::before{
+                         
+                            }
+                            &::after{
+                              
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & .icon{
+          
+        }
+        & .newsletter{
+            & .input-group{
+                & .form-control {
+                    &::placeholder{
+                      
+                    }
+                }
             }
         }
     }
 }
 // X-Large devices (large desktops, 1200px and up)
 @mixin footer-mixin-min-xl() {
-    .footer {
-        & .footer-logo {
+    .footer{
+        & .footerHeading{
+          
         }
-        & .footer-icon {
+        & .text{
+          
         }
-        & .footer-data {
-        }
-        & .footer-detail {
-            &:hover {
-            }
-        }
-        & .subscibe-title {
-        }
-        & .subscribe-main {
-            & .subscibe-input {
-                &:focus {
-                }
-                &::placeholder {
-                }
-            }
-        }
-        & .footer-subheading {
-        }
-        & .main-link {
-            &::before {
-            }
-            &:hover {
-                &::before {
-                }
-            }
-        }
-        & .social-media {
-            & .social-link {
-                & .social-img {
-                }
-                &:hover {
-                    & .social-img {
+        & .socialMedia{
+            & ul{
+                & li{
+                    & .icon{
+                  
+                        &:hover{
+                         
+                        }
                     }
                 }
-                
-            }
-        } 
-        & .copyright-title {
-            & .img {    
             }
         }
-        & .policy-title {
-            &:hover {
+        & .footerLink{
+            & ul{
+                & li{
+                    & a{
+                     
+                        &::before{
+                        
+                        }
+                        &::after{
+                    
+                        }
+                        &:hover{
+                         
+                            &::before{
+                         
+                            }
+                            &::after{
+                              
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & .icon{
+          
+        }
+        & .newsletter{
+            & .input-group{
+                & .form-control {
+                    &::placeholder{
+                      
+                    }
+                }
             }
         }
     }
 }
 // XX-Large devices (larger desktops, 1400px and up)
 @mixin footer-mixin-min-xxl() {
-    .footer {
-        & .footer-logo {
+    .footer{
+        & .footerHeading{
+          
         }
-        & .footer-icon {
+        & .text{
+          
         }
-        & .footer-data {
-        }
-        & .footer-detail {
-            &:hover {
-            }
-        }
-        & .subscibe-title {
-        }
-        & .subscribe-main {
-            & .subscibe-input {
-                &:focus {
-                }
-                &::placeholder {
-                }
-            }
-        }
-        & .footer-subheading {
-        }
-        & .main-link {
-            &::before {
-            }
-            &:hover {
-                &::before {
-                }
-            }
-        }
-        & .social-media {
-            & .social-link {
-                & .social-img {
-                }
-                &:hover {
-                    & .social-img {
+        & .socialMedia{
+            & ul{
+                & li{
+                    & .icon{
+                  
+                        &:hover{
+                         
+                        }
                     }
                 }
-                
-            }
-        } 
-        & .copyright-title {
-            & .img {    
             }
         }
-        & .policy-title {
-            &:hover {
+        & .footerLink{
+            & ul{
+                & li{
+                    & a{
+                     
+                        &::before{
+                        
+                        }
+                        &::after{
+                    
+                        }
+                        &:hover{
+                         
+                            &::before{
+                         
+                            }
+                            &::after{
+                              
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & .icon{
+          
+        }
+        & .newsletter{
+            & .input-group{
+                & .form-control {
+                    &::placeholder{
+                      
+                    }
+                }
             }
         }
     }
 }
 // X-Large devices (large desktops, less than 1400px)
 @mixin footer-mixin-max-xl() {
-    .footer {
-        & .footer-logo {
+    .footer{
+        & .footerHeading{
+          
         }
-        & .footer-icon {
+        & .text{
+          
         }
-        & .footer-data {
-        }
-        & .footer-detail {
-            &:hover {
-            }
-        }
-        & .subscibe-title {
-        }
-        & .subscribe-main {
-            & .subscibe-input {
-                &:focus {
-                }
-                &::placeholder {
-                }
-            }
-        }
-        & .footer-subheading {
-        }
-        & .main-link {
-            &::before {
-            }
-            &:hover {
-                &::before {
-                }
-            }
-        }
-        & .social-media {
-            & .social-link {
-                & .social-img {
-                }
-                &:hover {
-                    & .social-img {
+        & .socialMedia{
+            & ul{
+                & li{
+                    & .icon{
+                  
+                        &:hover{
+                         
+                        }
                     }
                 }
-                
-            }
-        } 
-        & .copyright-title {
-            & .img {    
             }
         }
-        & .policy-title {
-            &:hover {
+        & .footerLink{
+            & ul{
+                & li{
+                    & a{
+                     
+                        &::before{
+                        
+                        }
+                        &::after{
+                    
+                        }
+                        &:hover{
+                         
+                            &::before{
+                         
+                            }
+                            &::after{
+                              
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & .icon{
+          
+        }
+        & .newsletter{
+            & .input-group{
+                & .form-control {
+                    &::placeholder{
+                      
+                    }
+                }
             }
         }
     }
 }
 // Large devices (desktops, less than 1200px)
 @mixin footer-mixin-max-lg() {
-    .footer {
-        & .footer-logo {
+    .footer{
+        & .footerHeading{
+          
         }
-        & .footer-icon {
+        & .text{
+          
         }
-        & .footer-data {
-        }
-        & .footer-detail {
-            &:hover {
-            }
-        }
-        & .subscibe-title {
-        }
-        & .subscribe-main {
-            & .subscibe-input {
-                &:focus {
-                }
-                &::placeholder {
-                }
-            }
-        }
-        & .footer-subheading {
-        }
-        & .main-link {
-            &::before {
-            }
-            &:hover {
-                &::before {
-                }
-            }
-        }
-        & .social-media {
-            & .social-link {
-                & .social-img {
-                }
-                &:hover {
-                    & .social-img {
+        & .socialMedia{
+            & ul{
+                & li{
+                    & .icon{
+                  
+                        &:hover{
+                         
+                        }
                     }
                 }
-                
-            }
-        } 
-        & .copyright-title {
-            & .img {    
             }
         }
-        & .policy-title {
-            &:hover {
+        & .footerLink{
+            & ul{
+                & li{
+                    & a{
+                     
+                        &::before{
+                        
+                        }
+                        &::after{
+                    
+                        }
+                        &:hover{
+                         
+                            &::before{
+                         
+                            }
+                            &::after{
+                              
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & .icon{
+          
+        }
+        & .newsletter{
+            & .input-group{
+                & .form-control {
+                    &::placeholder{
+                      
+                    }
+                }
             }
         }
     }
 }
 // Medium devices (tablets, less than 992px)
 @mixin footer-mixin-max-md() {
-    .footer {
-        & .footer-logo {
-            height: auto;
-            width: 180px;
-        }
-        & .footer-icon {
-        }
-        & .footer-data {
-        }
-        & .footer-detail {
-            &:hover {
-            }
-        }
-        & .subscibe-title {
-        }
-        & .subscribe-main {
-            & .subscibe-input {
-                &:focus {
-                }
-                &::placeholder {
-                }
-            }
-        }
-        & .footer-subheading {
+    .footer{
+        & .footerHeading{
             font-size: 17px;
         }
-        & .main-link {
-            &::before {
-            }
-            &:hover {
-                &::before {
-                }
-            }
+        & .text{
+            font-size: 14px;
         }
-        & .social-media {
-            & .social-link {
-                & .social-img {
-                }
-                &:hover {
-                    & .social-img {
+        & .socialMedia{
+            & ul{
+                & li{
+                    & .icon{
+                  
+                        &:hover{
+                         
+                        }
                     }
                 }
-                
-            }
-        } 
-        & .copyright-title {
-            & .img {    
             }
         }
-        & .policy-title {
-            &:hover {
+        & .footerLink{
+            & ul{
+                & li{
+                    & a{
+                     
+                        &::before{
+                        
+                        }
+                        &::after{
+                    
+                        }
+                        &:hover{
+                         
+                            &::before{
+                         
+                            }
+                            &::after{
+                              
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & .icon{
+          
+        }
+        & .newsletter{
+            & .input-group{
+                & .form-control {
+                    &::placeholder{
+                      
+                    }
+                }
             }
         }
     }
 }
 // Small devices (landscape phones, less than 768px)
 @mixin footer-mixin-max-sm() {
-    .footer {
-        & .footer-logo {
-            height: auto;
-            width: 160px;
-        }
-        & .footer-icon {
-            height: 18px;
-            width: 18px;
-        }
-        & .footer-data {
-            font-size: 14px;
-        }
-        & .footer-detail {
-            font-size: 13px;
-            &:hover {
-            }
-        }
-        & .subscibe-title {
-            font-size: 15px;
-        }
-        & .subscribe-main {
-            & .subscibe-input {
-                font-size:13px;
-                &:focus {
-                }
-                &::placeholder {
-                }
-            }
-        }
-        & .footer-subheading {
+    .footer{
+        & .footerHeading{
             font-size: 16px;
         }
-        & .main-link {
-            font-size: 14px;
-            &::before {
-            }
-            &:hover {
-                &::before {
-                }
-            }
+        & .text{
+          font-size: 13px;
         }
-        & .social-media {
-            & .social-link {
-                height: 40px;
-                width: 40px;
-                & .social-img {
-                }
-                &:hover {
-                    & .social-img {
+        & .socialMedia{
+            & ul{
+                & li{
+                    & .icon{
+                        width: 16px;
+                        height: 15px;
+                        &:hover{
+                         
+                        }
                     }
                 }
-                
-            }
-        } 
-        & .copyright-title {
-            font-size: 12px;
-            & .img { 
-                font-size: 12px;   
             }
         }
-        & .policy-title {
-            font-size: 13px;
-            &:hover {
+        & .footerLink{
+            & ul{
+                & li{
+                    & a{
+                     
+                        &::before{
+                        
+                        }
+                        &::after{
+                    
+                        }
+                        &:hover{
+                         
+                            &::before{
+                         
+                            }
+                            &::after{
+                              
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & .icon{
+          
+        }
+        & .newsletter{
+            & .input-group{
+                & .form-control {
+                    &::placeholder{
+                      
+                    }
+                }
             }
         }
     }
 }
 // X-Small devices (portrait phones, less than 576px)
 @mixin footer-mixin-max-xs() {
-    .footer {
-        & .footer-logo {
-            height: auto;
-            width: 140px;
-        }
-        & .footer-icon {
-            height: 16px;
-            width: 16px;
-        }
-        & .footer-data {
-            font-size: 13px;
-        }
-        & .footer-detail {
-            font-size: 12px;
-            &:hover {
-            }
-        }
-        & .subscibe-title {
-            font-size: 14px;
-        }
-        & .subscribe-main {
-            & img {
-                height: 14px;
-            }
-            & .subscibe-input {
-                font-size: 12px;
-                &:focus {
-                }
-                &::placeholder {
-                }
-            }
-        }
-        & .footer-subheading {
+    .footer{
+        & .footerHeading{
             font-size: 15px;
         }
-        & .footer-data-main {
-            padding-right: 0;
+        & .text{
+          
         }
-        & .main-link {
-            font-size: 13px;
-            &::before {
-            }
-            &:hover {
-                &::before {
-                }
-            }
-        }
-        & .social-media {
-            & .social-link {
-                height: 35px;
-                width: 35px;
-                padding: 8px;
-                & .social-img {
-                }
-                &:hover {
-                    & .social-img {
+        & .socialMedia{
+            & ul{
+                & li{
+                    & .icon{
+                  
+                        &:hover{
+                         
+                        }
                     }
                 }
-                
-            }
-        } 
-        & .copyright-title {
-            text-align: center;
-            font-size: 11px;
-            padding-bottom: 8px;
-            & .img {    
-                font-size: 11px;
             }
         }
-        & .policy-title {
-            font-size: 12px;
-            &:hover {
+        & .footerLink{
+            & ul{
+                & li{
+                    & a{
+                     
+                        &::before{
+                        
+                        }
+                        &::after{
+                    
+                        }
+                        &:hover{
+                         
+                            &::before{
+                         
+                            }
+                            &::after{
+                              
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & .icon{
+          
+        }
+        & .newsletter{
+            & .input-group{
+                & .form-control {
+                    &::placeholder{
+                      
+                    }
+                }
             }
         }
     }
 }
-// footer end
