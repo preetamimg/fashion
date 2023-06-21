@@ -65,6 +65,28 @@
     <!-- swiper slider -->
     <link rel="stylesheet" href="assets/libs/swiper/css/swiper-bundle.min.css">
 </head>
+<style>
+.heart {
+  width: 20px;
+  height: 29px;
+  background: url("https://cssanimation.rocks/images/posts/steps/heart.png") no-repeat;
+  background-position: 0 0;
+  cursor: pointer;
+  transition: background-position 1s steps(28);
+  transition-duration: 0s;
+  
+  &.is-active {
+    transition-duration: 1s;
+    background-position: -2800px 0;
+  }
+}
+.placement {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+</style>
 <body>
 <!-- navbar start -->
 <nav class="navbar navbar-expand-lg container-fluid sticky-top bg-white" id="navbar">
@@ -191,7 +213,7 @@
   <div class="container">
     <div class="row">
       <div class="col-12 heading text-center">Our Top Collection</div>
-      <div class="col-12 py-3">
+      <div class="col-12 py-4">
         <ul class="nav nav-tab justify-content-center topcollection-tab border-0" id="myTab" role="tablist">
         <li class="nav-item" role="presentation">
           <button class="nav-link p-0 position-relative bg-transparent topcollection-link active border-0 fw-medium" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">All</button>
@@ -206,111 +228,1288 @@
           <button class="nav-link p-0 position-relative bg-transparent topcollection-link border-0 fw-medium" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false">Sale</button>
         </li>
         <li class="nav-item" role="presentation">
-          <button class="nav-link p-0 position-relative bg-transparent border-0 topcollection-link fw-medium" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false">Best Rated</button>
+          <button class="nav-link p-0 position-relative bg-transparent border-0 topcollection-link fw-medium" id="bestrelated-tab" data-bs-toggle="tab" data-bs-target="#bestrelated-tab-pane" type="button" role="tab" aria-controls="bestrelated-tab-pane" aria-selected="false">Best Rated</button>
         </li>
         
       </ul>
     </div>
-    <div class="col-12 px-0">
-      <div class="row mx-0">
-        <div class="col-3">
-          <div class="shop-card">
-            <div class="row mx-0">
-              <div class="col-12 px-0 overflow-hidden">
-                <div class="bg-secondary bg-opacity-25 cardimg-main position-relative">
-                  <div class="shopcard-img mx-auto">
-                    <img src="assets/img/Index/card1.svg" alt="shopping" class="h-100 w-100">
-                  </div>
-                 <div class="cartbtn-main position-absolute start-0 w-100 p-2">
-                  <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
-                 </div>
-                </div>
-              </div>
-              <div class="col-12 px-0 pt-3">
+    <div class="col-12 px-0 pt-1">
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper ">
+              <div class="swiper-slide"> 
+                <div class="shop-card h-100">
                 <div class="row mx-0">
-                  <div class="col px-0 card-title">Dresses</div>
-                  <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                  <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                    <div class="">
+                      <div class="shopcard-img mx-auto">
+                        <img src="assets/img/Index/card1.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                      </div>
+                     <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                      <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                     </div>
+                    </div>
+                  </div>
+                  <div class="col-12 px-0 pt-3">
+                    <div class="row mx-0">
+                      <div class="col px-0 card-title">Dresses</div>
+                      <div class="col-auto px-0">
+                        <div class="placement">
+                          <div class="heart"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                  <div class="col-12 px-0 price">$299</div>
+                </div>
+              
+              </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="shop-card h-100">
+                  <div class="row mx-0">
+                    <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                      <div class="">
+                        <div class="shopcard-img mx-auto">
+                          <img src="assets/img/Index/card2.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                        </div>
+                       <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                        <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                       </div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 pt-3">
+                      <div class="row mx-0">
+                        <div class="col px-0 card-title">Dresses</div>
+                        <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                    <div class="col-12 px-0 price">$299</div>
+                  </div>               
                 </div>
               </div>
-              <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
-              <div class="col-12 px-0 price">$299</div>
+              <div class="swiper-slide">
+                <div class="shop-card h-100">
+                  <div class="row mx-0">
+                    <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                      <div class="">
+                        <div class="shopcard-img mx-auto">
+                          <img src="assets/img/Index/card3.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                        </div>
+                       <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                        <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                       </div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 pt-3">
+                      <div class="row mx-0">
+                        <div class="col px-0 card-title">Dresses</div>
+                        <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                    <div class="col-12 px-0 price">$299</div>
+                  </div>
+                
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="shop-card h-100">
+                  <div class="row mx-0">
+                    <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                      <div class="">
+                        <div class="shopcard-img mx-auto">
+                          <img src="assets/img/Index/card4.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                        </div>
+                       <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                        <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                       </div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 pt-3">
+                      <div class="row mx-0">
+                        <div class="col px-0 card-title">Dresses</div>
+                        <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                    <div class="col-12 px-0 price">$299</div>
+                  </div>
+                
+                </div>
+              </div>
+              <div class="swiper-slide"> 
+                <div class="shop-card h-100">
+                <div class="row mx-0">
+                  <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                    <div class="">
+                      <div class="shopcard-img mx-auto">
+                        <img src="assets/img/Index/card1.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                      </div>
+                     <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                      <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                     </div>
+                    </div>
+                  </div>
+                  <div class="col-12 px-0 pt-3">
+                    <div class="row mx-0">
+                      <div class="col px-0 card-title">Dresses</div>
+                      <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                    </div>
+                  </div>
+                  <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                  <div class="col-12 px-0 price">$299</div>
+                </div>
+              </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="shop-card h-100">
+                  <div class="row mx-0">
+                    <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                      <div class="">
+                        <div class="shopcard-img mx-auto">
+                          <img src="assets/img/Index/card2.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                        </div>
+                       <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                        <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                       </div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 pt-3">
+                      <div class="row mx-0">
+                        <div class="col px-0 card-title">Dresses</div>
+                        <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                    <div class="col-12 px-0 price">$299</div>
+                  </div>               
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="shop-card h-100">
+                  <div class="row mx-0">
+                    <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                      <div class="">
+                        <div class="shopcard-img mx-auto">
+                          <img src="assets/img/Index/card3.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                        </div>
+                       <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                        <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                       </div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 pt-3">
+                      <div class="row mx-0">
+                        <div class="col px-0 card-title">Dresses</div>
+                        <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                    <div class="col-12 px-0 price">$299</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="shop-card h-100">
+                  <div class="row mx-0">
+                    <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                      <div class="">
+                        <div class="shopcard-img mx-auto">
+                          <img src="assets/img/Index/card4.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                        </div>
+                       <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                        <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                       </div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 pt-3">
+                      <div class="row mx-0">
+                        <div class="col px-0 card-title">Dresses</div>
+                        <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                    <div class="col-12 px-0 price">$299</div>
+                  </div>
+                </div>
+              </div>
             </div>
-          
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+          <!-- <div class="row mx-0">
+          <div class="col-3">
+            <div class="shop-card h-100">
+              <div class="row mx-0">
+                <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                  <div class="">
+                    <div class="shopcard-img mx-auto">
+                      <img src="assets/img/Index/card1.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                    </div>
+                   <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                    <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                   </div>
+                  </div>
+                </div>
+                <div class="col-12 px-0 pt-3">
+                  <div class="row mx-0">
+                    <div class="col px-0 card-title">Dresses</div>
+                    <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                  </div>
+                </div>
+                <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                <div class="col-12 px-0 price">$299</div>
+              </div>
+            
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="shop-card h-100">
+              <div class="row mx-0">
+                <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                  <div class="">
+                    <div class="shopcard-img mx-auto">
+                      <img src="assets/img/Index/card2.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                    </div>
+                   <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                    <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                   </div>
+                  </div>
+                </div>
+                <div class="col-12 px-0 pt-3">
+                  <div class="row mx-0">
+                    <div class="col px-0 card-title">Dresses</div>
+                    <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                  </div>
+                </div>
+                <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                <div class="col-12 px-0 price">$299</div>
+              </div>
+            
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="shop-card h-100">
+              <div class="row mx-0">
+                <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                  <div class="">
+                    <div class="shopcard-img mx-auto">
+                      <img src="assets/img/Index/card3.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                    </div>
+                   <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                    <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                   </div>
+                  </div>
+                </div>
+                <div class="col-12 px-0 pt-3">
+                  <div class="row mx-0">
+                    <div class="col px-0 card-title">Dresses</div>
+                    <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                  </div>
+                </div>
+                <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                <div class="col-12 px-0 price">$299</div>
+              </div>
+            
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="shop-card h-100">
+              <div class="row mx-0">
+                <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                  <div class="">
+                    <div class="shopcard-img mx-auto">
+                      <img src="assets/img/Index/card4.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                    </div>
+                   <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                    <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                   </div>
+                  </div>
+                </div>
+                <div class="col-12 px-0 pt-3">
+                  <div class="row mx-0">
+                    <div class="col px-0 card-title">Dresses</div>
+                    <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                  </div>
+                </div>
+                <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                <div class="col-12 px-0 price">$299</div>
+              </div>
+            
+            </div>
+          </div>
+        </div> -->
+         </div>
+        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper ">
+              <div class="swiper-slide">
+                <div class="shop-card h-100">
+                  <div class="row mx-0">
+                    <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                      <div class="">
+                        <div class="shopcard-img mx-auto">
+                          <img src="assets/img/Index/card3.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                        </div>
+                       <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                        <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                       </div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 pt-3">
+                      <div class="row mx-0">
+                        <div class="col px-0 card-title">Dresses</div>
+                        <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                    <div class="col-12 px-0 price">$299</div>
+                  </div>
+                
+                </div>
+              </div>
+              <div class="swiper-slide"> 
+                <div class="shop-card h-100">
+                <div class="row mx-0">
+                  <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                    <div class="">
+                      <div class="shopcard-img mx-auto">
+                        <img src="assets/img/Index/card1.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                      </div>
+                     <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                      <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                     </div>
+                    </div>
+                  </div>
+                  <div class="col-12 px-0 pt-3">
+                    <div class="row mx-0">
+                      <div class="col px-0 card-title">Dresses</div>
+                      <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                    </div>
+                  </div>
+                  <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                  <div class="col-12 px-0 price">$299</div>
+                </div>
+              
+              </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="shop-card h-100">
+                  <div class="row mx-0">
+                    <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                      <div class="">
+                        <div class="shopcard-img mx-auto">
+                          <img src="assets/img/Index/card2.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                        </div>
+                       <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                        <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                       </div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 pt-3">
+                      <div class="row mx-0">
+                        <div class="col px-0 card-title">Dresses</div>
+                        <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                    <div class="col-12 px-0 price">$299</div>
+                  </div>
+                
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="shop-card h-100">
+                  <div class="row mx-0">
+                    <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                      <div class="">
+                        <div class="shopcard-img mx-auto">
+                          <img src="assets/img/Index/card4.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                        </div>
+                       <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                        <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                       </div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 pt-3">
+                      <div class="row mx-0">
+                        <div class="col px-0 card-title">Dresses</div>
+                        <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                    <div class="col-12 px-0 price">$299</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide"> 
+                <div class="shop-card h-100">
+                <div class="row mx-0">
+                  <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                    <div class="">
+                      <div class="shopcard-img mx-auto">
+                        <img src="assets/img/Index/card1.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                      </div>
+                     <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                      <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                     </div>
+                    </div>
+                  </div>
+                  <div class="col-12 px-0 pt-3">
+                    <div class="row mx-0">
+                      <div class="col px-0 card-title">Dresses</div>
+                      <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                    </div>
+                  </div>
+                  <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                  <div class="col-12 px-0 price">$299</div>
+                </div>
+              
+              </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="shop-card h-100">
+                  <div class="row mx-0">
+                    <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                      <div class="">
+                        <div class="shopcard-img mx-auto">
+                          <img src="assets/img/Index/card2.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                        </div>
+                       <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                        <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                       </div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 pt-3">
+                      <div class="row mx-0">
+                        <div class="col px-0 card-title">Dresses</div>
+                        <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                    <div class="col-12 px-0 price">$299</div>
+                  </div>
+                
+                </div>
+              </div>
+              <div class="swiper-slide"> 
+                <div class="shop-card h-100">
+                <div class="row mx-0">
+                  <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                    <div class="">
+                      <div class="shopcard-img mx-auto">
+                        <img src="assets/img/Index/card1.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                      </div>
+                     <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                      <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                     </div>
+                    </div>
+                  </div>
+                  <div class="col-12 px-0 pt-3">
+                    <div class="row mx-0">
+                      <div class="col px-0 card-title">Dresses</div>
+                      <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                    </div>
+                  </div>
+                  <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                  <div class="col-12 px-0 price">$299</div>
+                </div>
+              </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="shop-card h-100">
+                  <div class="row mx-0">
+                    <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                      <div class="">
+                        <div class="shopcard-img mx-auto">
+                          <img src="assets/img/Index/card2.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                        </div>
+                       <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                        <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                       </div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 pt-3">
+                      <div class="row mx-0">
+                        <div class="col px-0 card-title">Dresses</div>
+                        <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                    <div class="col-12 px-0 price">$299</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="shop-card h-100">
+                  <div class="row mx-0">
+                    <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                      <div class="">
+                        <div class="shopcard-img mx-auto">
+                          <img src="assets/img/Index/card3.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                        </div>
+                       <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                        <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                       </div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 pt-3">
+                      <div class="row mx-0">
+                        <div class="col px-0 card-title">Dresses</div>
+                        <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                    <div class="col-12 px-0 price">$299</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="shop-card h-100">
+                  <div class="row mx-0">
+                    <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                      <div class="">
+                        <div class="shopcard-img mx-auto">
+                          <img src="assets/img/Index/card4.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                        </div>
+                       <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                        <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                       </div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 pt-3">
+                      <div class="row mx-0">
+                        <div class="col px-0 card-title">Dresses</div>
+                        <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                    <div class="col-12 px-0 price">$299</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+          <!-- <div class="row mx-0">
+            <div class="col-3">
+              <div class="shop-card h-100">
+                <div class="row mx-0">
+                  <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                    <div class="">
+                      <div class="shopcard-img mx-auto">
+                        <img src="assets/img/Index/card4.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                      </div>
+                     <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                      <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                     </div>
+                    </div>
+                  </div>
+                  <div class="col-12 px-0 pt-3">
+                    <div class="row mx-0">
+                      <div class="col px-0 card-title">Dresses</div>
+                      <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                    </div>
+                  </div>
+                  <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                  <div class="col-12 px-0 price">$299</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="shop-card h-100">
+                <div class="row mx-0">
+                  <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                    <div class="">
+                      <div class="shopcard-img mx-auto">
+                        <img src="assets/img/Index/card3.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                      </div>
+                     <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                      <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                     </div>
+                    </div>
+                  </div>
+                  <div class="col-12 px-0 pt-3">
+                    <div class="row mx-0">
+                      <div class="col px-0 card-title">Dresses</div>
+                      <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                    </div>
+                  </div>
+                  <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                  <div class="col-12 px-0 price">$299</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="shop-card h-100">
+                <div class="row mx-0">
+                  <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                    <div class="">
+                      <div class="shopcard-img mx-auto">
+                        <img src="assets/img/Index/card2.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                      </div>
+                     <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                      <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                     </div>
+                    </div>
+                  </div>
+                  <div class="col-12 px-0 pt-3">
+                    <div class="row mx-0">
+                      <div class="col px-0 card-title">Dresses</div>
+                      <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                    </div>
+                  </div>
+                  <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                  <div class="col-12 px-0 price">$299</div>
+                </div>
+              
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="shop-card h-100">
+                <div class="row mx-0">
+                  <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                    <div class="">
+                      <div class="shopcard-img mx-auto">
+                        <img src="assets/img/Index/card1.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                      </div>
+                     <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                      <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                     </div>
+                    </div>
+                  </div>
+                  <div class="col-12 px-0 pt-3">
+                    <div class="row mx-0">
+                      <div class="col px-0 card-title">Dresses</div>
+                      <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                    </div>
+                  </div>
+                  <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                  <div class="col-12 px-0 price">$299</div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+        <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper ">
+              <div class="swiper-slide"> 
+                <div class="shop-card h-100">
+                <div class="row mx-0">
+                  <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                    <div class="">
+                      <div class="shopcard-img mx-auto">
+                        <img src="assets/img/Index/card1.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                      </div>
+                     <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                      <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                     </div>
+                    </div>
+                  </div>
+                  <div class="col-12 px-0 pt-3">
+                    <div class="row mx-0">
+                      <div class="col px-0 card-title">Dresses</div>
+                      <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                    </div>
+                  </div>
+                  <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                  <div class="col-12 px-0 price">$299</div>
+                </div>
+              
+              </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="shop-card h-100">
+                  <div class="row mx-0">
+                    <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                      <div class="">
+                        <div class="shopcard-img mx-auto">
+                          <img src="assets/img/Index/card2.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                        </div>
+                       <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                        <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                       </div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 pt-3">
+                      <div class="row mx-0">
+                        <div class="col px-0 card-title">Dresses</div>
+                        <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                    <div class="col-12 px-0 price">$299</div>
+                  </div>
+                
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="shop-card h-100">
+                  <div class="row mx-0">
+                    <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                      <div class="">
+                        <div class="shopcard-img mx-auto">
+                          <img src="assets/img/Index/card3.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                        </div>
+                       <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                        <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                       </div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 pt-3">
+                      <div class="row mx-0">
+                        <div class="col px-0 card-title">Dresses</div>
+                        <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                    <div class="col-12 px-0 price">$299</div>
+                  </div>
+                
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="shop-card h-100">
+                  <div class="row mx-0">
+                    <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                      <div class="">
+                        <div class="shopcard-img mx-auto">
+                          <img src="assets/img/Index/card4.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                        </div>
+                       <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                        <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                       </div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 pt-3">
+                      <div class="row mx-0">
+                        <div class="col px-0 card-title">Dresses</div>
+                        <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                    <div class="col-12 px-0 price">$299</div>
+                  </div>
+                
+                </div>
+              </div>
+              <div class="swiper-slide"> 
+                <div class="shop-card h-100">
+                <div class="row mx-0">
+                  <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                    <div class="">
+                      <div class="shopcard-img mx-auto">
+                        <img src="assets/img/Index/card1.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                      </div>
+                     <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                      <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                     </div>
+                    </div>
+                  </div>
+                  <div class="col-12 px-0 pt-3">
+                    <div class="row mx-0">
+                      <div class="col px-0 card-title">Dresses</div>
+                      <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                    </div>
+                  </div>
+                  <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                  <div class="col-12 px-0 price">$299</div>
+                </div>
+              </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="shop-card h-100">
+                  <div class="row mx-0">
+                    <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                      <div class="">
+                        <div class="shopcard-img mx-auto">
+                          <img src="assets/img/Index/card2.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                        </div>
+                       <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                        <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                       </div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 pt-3">
+                      <div class="row mx-0">
+                        <div class="col px-0 card-title">Dresses</div>
+                        <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                    <div class="col-12 px-0 price">$299</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="shop-card h-100">
+                  <div class="row mx-0">
+                    <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                      <div class="">
+                        <div class="shopcard-img mx-auto">
+                          <img src="assets/img/Index/card3.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                        </div>
+                       <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                        <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                       </div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 pt-3">
+                      <div class="row mx-0">
+                        <div class="col px-0 card-title">Dresses</div>
+                        <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                    <div class="col-12 px-0 price">$299</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="shop-card h-100">
+                  <div class="row mx-0">
+                    <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                      <div class="">
+                        <div class="shopcard-img mx-auto">
+                          <img src="assets/img/Index/card4.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                        </div>
+                       <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                        <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                       </div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 pt-3">
+                      <div class="row mx-0">
+                        <div class="col px-0 card-title">Dresses</div>
+                        <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                    <div class="col-12 px-0 price">$299</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
           </div>
         </div>
-        <div class="col-3">
-          <div class="shop-card">
-            <div class="row mx-0">
-              <div class="col-12 px-0 overflow-hidden">
-                <div class="bg-secondary bg-opacity-25 cardimg-main position-relative">
-                  <div class="shopcard-img mx-auto">
-                    <img src="assets/img/Index/card1.svg" alt="shopping" class="h-100 w-100">
-                  </div>
-                 <div class="cartbtn-main position-absolute start-0 w-100 p-2">
-                  <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
-                 </div>
-                </div>
-              </div>
-              <div class="col-12 px-0 pt-3">
+        <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper ">
+              <div class="swiper-slide"> 
+                <div class="shop-card h-100">
                 <div class="row mx-0">
-                  <div class="col px-0 card-title">Dresses</div>
-                  <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                  <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                    <div class="">
+                      <div class="shopcard-img mx-auto">
+                        <img src="assets/img/Index/card1.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                      </div>
+                     <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                      <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                     </div>
+                    </div>
+                  </div>
+                  <div class="col-12 px-0 pt-3">
+                    <div class="row mx-0">
+                      <div class="col px-0 card-title">Dresses</div>
+                      <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                    </div>
+                  </div>
+                  <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                  <div class="col-12 px-0 price">$299</div>
+                </div>
+              
+              </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="shop-card h-100">
+                  <div class="row mx-0">
+                    <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                      <div class="">
+                        <div class="shopcard-img mx-auto">
+                          <img src="assets/img/Index/card3.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                        </div>
+                       <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                        <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                       </div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 pt-3">
+                      <div class="row mx-0">
+                        <div class="col px-0 card-title">Dresses</div>
+                        <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                    <div class="col-12 px-0 price">$299</div>
+                  </div>
+                
                 </div>
               </div>
-              <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
-              <div class="col-12 px-0 price">$299</div>
+              <div class="swiper-slide">
+                <div class="shop-card h-100">
+                  <div class="row mx-0">
+                    <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                      <div class="">
+                        <div class="shopcard-img mx-auto">
+                          <img src="assets/img/Index/card4.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                        </div>
+                       <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                        <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                       </div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 pt-3">
+                      <div class="row mx-0">
+                        <div class="col px-0 card-title">Dresses</div>
+                        <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                    <div class="col-12 px-0 price">$299</div>
+                  </div>
+                
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="shop-card h-100">
+                  <div class="row mx-0">
+                    <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                      <div class="">
+                        <div class="shopcard-img mx-auto">
+                          <img src="assets/img/Index/card2.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                        </div>
+                       <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                        <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                       </div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 pt-3">
+                      <div class="row mx-0">
+                        <div class="col px-0 card-title">Dresses</div>
+                        <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                    <div class="col-12 px-0 price">$299</div>
+                  </div>
+                
+                </div>
+              </div>
+              <div class="swiper-slide"> 
+                <div class="shop-card h-100">
+                <div class="row mx-0">
+                  <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                    <div class="">
+                      <div class="shopcard-img mx-auto">
+                        <img src="assets/img/Index/card1.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                      </div>
+                     <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                      <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                     </div>
+                    </div>
+                  </div>
+                  <div class="col-12 px-0 pt-3">
+                    <div class="row mx-0">
+                      <div class="col px-0 card-title">Dresses</div>
+                      <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                    </div>
+                  </div>
+                  <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                  <div class="col-12 px-0 price">$299</div>
+                </div>
+              </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="shop-card h-100">
+                  <div class="row mx-0">
+                    <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                      <div class="">
+                        <div class="shopcard-img mx-auto">
+                          <img src="assets/img/Index/card2.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                        </div>
+                       <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                        <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                       </div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 pt-3">
+                      <div class="row mx-0">
+                        <div class="col px-0 card-title">Dresses</div>
+                        <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                    <div class="col-12 px-0 price">$299</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="shop-card h-100">
+                  <div class="row mx-0">
+                    <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                      <div class="">
+                        <div class="shopcard-img mx-auto">
+                          <img src="assets/img/Index/card3.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                        </div>
+                       <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                        <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                       </div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 pt-3">
+                      <div class="row mx-0">
+                        <div class="col px-0 card-title">Dresses</div>
+                        <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                    <div class="col-12 px-0 price">$299</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="shop-card h-100">
+                  <div class="row mx-0">
+                    <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                      <div class="">
+                        <div class="shopcard-img mx-auto">
+                          <img src="assets/img/Index/card4.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                        </div>
+                       <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                        <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                       </div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 pt-3">
+                      <div class="row mx-0">
+                        <div class="col px-0 card-title">Dresses</div>
+                        <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                    <div class="col-12 px-0 price">$299</div>
+                  </div>
+                </div>
+              </div>
             </div>
-          
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
           </div>
         </div>
-        <div class="col-3">
-          <div class="shop-card">
-            <div class="row mx-0">
-              <div class="col-12 px-0 overflow-hidden">
-                <div class="bg-secondary bg-opacity-25 cardimg-main position-relative">
-                  <div class="shopcard-img mx-auto">
-                    <img src="assets/img/Index/card1.svg" alt="shopping" class="h-100 w-100">
-                  </div>
-                 <div class="cartbtn-main position-absolute start-0 w-100 p-2">
-                  <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
-                 </div>
-                </div>
-              </div>
-              <div class="col-12 px-0 pt-3">
+        <div class="tab-pane fade" id="bestrelated-tab-pane" role="tabpanel" aria-labelledby="bestrelated-tab" tabindex="0">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper ">
+              <div class="swiper-slide"> 
+                <div class="shop-card h-100">
                 <div class="row mx-0">
-                  <div class="col px-0 card-title">Dresses</div>
-                  <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
-                </div>
-              </div>
-              <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
-              <div class="col-12 px-0 price">$299</div>
-            </div>
-          
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="shop-card">
-            <div class="row mx-0">
-              <div class="col-12 px-0 overflow-hidden">
-                <div class="bg-secondary bg-opacity-25 cardimg-main position-relative">
-                  <div class="shopcard-img mx-auto">
-                    <img src="assets/img/Index/card1.svg" alt="shopping" class="h-100 w-100">
+                  <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                    <div class="">
+                      <div class="shopcard-img mx-auto">
+                        <img src="assets/img/Index/card1.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                      </div>
+                     <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                      <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                     </div>
+                    </div>
                   </div>
-                 <div class="cartbtn-main position-absolute start-0 w-100 p-2">
-                  <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
-                 </div>
+                  <div class="col-12 px-0 pt-3">
+                    <div class="row mx-0">
+                      <div class="col px-0 card-title">Dresses</div>
+                      <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                    </div>
+                  </div>
+                  <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                  <div class="col-12 px-0 price">$299</div>
+                </div>
+              
+              </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="shop-card h-100">
+                  <div class="row mx-0">
+                    <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                      <div class="">
+                        <div class="shopcard-img mx-auto">
+                          <img src="assets/img/Index/card2.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                        </div>
+                       <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                        <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                       </div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 pt-3">
+                      <div class="row mx-0">
+                        <div class="col px-0 card-title">Dresses</div>
+                        <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                    <div class="col-12 px-0 price">$299</div>
+                  </div>
+                
                 </div>
               </div>
-              <div class="col-12 px-0 pt-3">
+              <div class="swiper-slide">
+                <div class="shop-card h-100">
+                  <div class="row mx-0">
+                    <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                      <div class="">
+                        <div class="shopcard-img mx-auto">
+                          <img src="assets/img/Index/card3.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                        </div>
+                       <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                        <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                       </div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 pt-3">
+                      <div class="row mx-0">
+                        <div class="col px-0 card-title">Dresses</div>
+                        <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                    <div class="col-12 px-0 price">$299</div>
+                  </div>
+                
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="shop-card h-100">
+                  <div class="row mx-0">
+                    <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                      <div class="">
+                        <div class="shopcard-img mx-auto">
+                          <img src="assets/img/Index/card4.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                        </div>
+                       <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                        <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                       </div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 pt-3">
+                      <div class="row mx-0">
+                        <div class="col px-0 card-title">Dresses</div>
+                        <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                    <div class="col-12 px-0 price">$299</div>
+                  </div>
+                
+                </div>
+              </div>
+              <div class="swiper-slide"> 
+                <div class="shop-card h-100">
                 <div class="row mx-0">
-                  <div class="col px-0 card-title">Dresses</div>
-                  <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                  <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                    <div class="">
+                      <div class="shopcard-img mx-auto">
+                        <img src="assets/img/Index/card1.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                      </div>
+                     <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                      <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                     </div>
+                    </div>
+                  </div>
+                  <div class="col-12 px-0 pt-3">
+                    <div class="row mx-0">
+                      <div class="col px-0 card-title">Dresses</div>
+                      <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                    </div>
+                  </div>
+                  <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                  <div class="col-12 px-0 price">$299</div>
+                </div>
+              
+              </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="shop-card h-100">
+                  <div class="row mx-0">
+                    <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                      <div class="">
+                        <div class="shopcard-img mx-auto">
+                          <img src="assets/img/Index/card2.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                        </div>
+                       <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                        <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                       </div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 pt-3">
+                      <div class="row mx-0">
+                        <div class="col px-0 card-title">Dresses</div>
+                        <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                    <div class="col-12 px-0 price">$299</div>
+                  </div>
+                
                 </div>
               </div>
-              <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
-              <div class="col-12 px-0 price">$299</div>
+              <div class="swiper-slide">
+                <div class="shop-card h-100">
+                  <div class="row mx-0">
+                    <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                      <div class="">
+                        <div class="shopcard-img mx-auto">
+                          <img src="assets/img/Index/card3.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                        </div>
+                       <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                        <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                       </div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 pt-3">
+                      <div class="row mx-0">
+                        <div class="col px-0 card-title">Dresses</div>
+                        <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                    <div class="col-12 px-0 price">$299</div>
+                  </div>
+                
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="shop-card h-100">
+                  <div class="row mx-0">
+                    <div class="col-12 px-0 overflow-hidden bg-secondary bg-opacity-25 position-relative">
+                      <div class="">
+                        <div class="shopcard-img mx-auto">
+                          <img src="assets/img/Index/card4.png" alt="shopping" class="h-100 w-100 img-fluid object-fit-cover shopcard-icon">
+                        </div>
+                       <div class="cartbtn-main position-absolute start-0 w-100 p-2">
+                        <button class="btn addto-cart border-0 rounded-0 w-100 fw-medium">Add To Cart</button>
+                       </div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 pt-3">
+                      <div class="row mx-0">
+                        <div class="col px-0 card-title">Dresses</div>
+                        <div class="col-auto px-0"><a href="javascript:;" class="addtofav"></a></div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 item-name">Cropped Leather Jacket</div>
+                    <div class="col-12 px-0 price">$299</div>
+                  </div>
+                
+                </div>
+              </div>
             </div>
-          
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
           </div>
         </div>
       </div>
@@ -345,6 +1544,36 @@ function cartClick() {
 	let button = this;
 	button.classList.add('clicked');
 }
+
+// slider
+var swiper = new Swiper(".mySwiper", {
+
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
+      }
+    });
+
+    // icon animation
+    $(function() {
+  $(".heart").on("click", function() {
+    $(this).toggleClass("is-active");
+  });
+  });
   </script>
 </body>
 </html>
