@@ -21,14 +21,17 @@
     z-index: 2;
 }
 .shop-btn:hover{
-    background-color: #AC8C5C;
-    color: #000 !important;
+    background-color: #000;
+}
+.rightarrow {
+    height: 14px;
+    width: 14px;
 }
 .shop-btn .right {
     transition: all 0.3s ease-in-out;
 }
 .shop-btn:hover .right{
-    filter: invert(1);
+    transform: translateX(8px);
 }
 
   /* media@querry */

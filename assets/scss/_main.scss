@@ -135,6 +135,7 @@ body {
     color: $white;
     transition: all 0.3s ease-in-out;
     font-size: 14px;
+    text-transform: capitalize;
     &:active {
         -webkit-transform: translateY(4px);
         transform: translateY(4px);
@@ -248,11 +249,11 @@ body {
   justify-content: space-between;
   & .owl-prev {
     position: absolute;
-    left: -20px;
+    left: -30px;
   }
   & .owl-next {
     position: absolute;
-    right: -20px;
+    right: -30px;
   }
 }
 .owl-dots {
@@ -1164,12 +1165,12 @@ body {
    // owl navs start
     .owl-nav {
     & .owl-prev {
-      height: 16px;
-      width: 16px;
+      height: 20px;
+      width:20px;
     }
     & .owl-next {
-      height: 16px;
-      width: 16xpx;
+      height: 20px;
+      width: 20px;
     }
     }
   // owl navs end
