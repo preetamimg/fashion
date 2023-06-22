@@ -1,5 +1,5 @@
 .heroSection{
-    height:550px;
+    height: calc(100vh - 80px);
     width: 100%;
     & .heroSectionowl{
         & .owl-stage-outer{
@@ -12,48 +12,54 @@
                     height: 100%  !important;
                     
                     & .item{
-                        background-color: $theme1;
-                        border: 2px solid $red;
-                        outline: 3px solid $black;
-                        & .heroContent {
-                            position: absolute;
-                            top: 50%;
-                            transform: translate(0,-50%);
-                            & .subheading{
-                                color:#A89D9C;
-                                position: relative;
-                                font-size: 16px;
-                                padding-left: 36px;
-                                &::before{
+                        // background-color: $theme1;
+                        // border: 1px solid $theme1;
+                        & .heroSectionOuter {
+                            border: 1px solid $theme1;
+                            padding: 3px;
+                            & .heroSectionInner {
+                                background-color: $theme1;
+                                & .heroContent {
                                     position: absolute;
-                                    content: '';
-                                    background-color: #A89D9C;
-                                    width: 30px;
-                                    height: 3px;
                                     top: 50%;
-                                    transform: translateY(-50%);
-                                    left: 0;
+                                    transform: translate(0,-50%);
+                                    & .subheading{
+                                        color:#A89D9C;
+                                        position: relative;
+                                        font-size: 16px;
+                                        padding-left: 36px;
+                                        &::before{
+                                            position: absolute;
+                                            content: '';
+                                            background-color: #A89D9C;
+                                            width: 30px;
+                                            height: 3px;
+                                            top: 50%;
+                                            transform: translateY(-50%);
+                                            left: 0;
+                                        }
+                                    }
+                                    & .heading{
+                                        font-size: 69px;
+                                        line-height: 74px;
+                                        font-weight: 200;
+                                        & span{
+                                            font-weight: 600;
+                                        }
+                                    }
+                                    & .heroBtn{
+                                        & .icon{
+                                            width: 16px;
+                                            height: 16px;
+                                        }
+                                    }
+                                } 
+                                & .heroImag {
+                                    height: 100%;
+                                    max-width: 400px;
+                                
                                 }
                             }
-                            & .heading{
-                                font-size: 69px;
-                                line-height: 74px;
-                                font-weight: 200;
-                                & span{
-                                    font-weight: 600;
-                                }
-                            }
-                            & .heroBtn{
-                                & .icon{
-                                    width: 16px;
-                                    height: 16px;
-                                }
-                            }
-                        } 
-                        & .heroImag {
-                            height: 100%;
-                            max-width: 400px;
-                          
                         }
                     }
                 }
@@ -153,27 +159,30 @@
                     & .owl-item{
                     
                         & .item{
-                         
-                            & .heroContent {
-                           
-                                & .subheading{
-                             
-                                    &::before{
+                         & .heroSectionOuter{
+                            & .heroSectionInner{
+                                & .heroContent {
                                
+                                    & .subheading{
+                                 
+                                        &::before{
+                                   
+                                        }
                                     }
-                                }
-                                & .heading{
-                                    font-size: 60px;
-                                    line-height: 66px;
-                                    & span{
-                                       
+                                    & .heading{
+                                        font-size: 60px;
+                                        line-height: 66px;
+                                        & span{
+                                           
+                                        }
                                     }
+                                } 
+                                & .heroImag {
+                                    
+                                  
                                 }
-                            } 
-                            & .heroImag {
-                                
-                              
                             }
+                         }
                         }
                     }
     
@@ -181,7 +190,7 @@
               
             }
             & .owl-dots{
-            
+                left: 80px;
                 & .owl-dot{
                 
                     &.active{
@@ -217,7 +226,6 @@
 // Medium devices (tablets, less than 992px)
 @mixin heroSection-mixin-max-md() {
     .heroSection{
-        height:400px;
         & .heroSectionowl{
             & .owl-stage-outer{
              
@@ -227,24 +235,30 @@
                     & .owl-item{
                     
                         & .item{
-                        
-                            & .heroContent {
-                           
-                                & .subheading{
-                             
-                                    &::before{
+                         & .heroSectionOuter{
+                            & .heroSectionInner{
+                                & .heroContent {
                                
+                                    & .subheading{
+                                 
+                                        &::before{
+                                   
+                                        }
                                     }
-                                }
-                                & .heading{
-                                    font-size: 40px;
-                                    line-height: 49px;
-                                    & span{
-                                       
+                                    & .heading{
+                                        font-size: 40px;
+                                        line-height: 49px;
+                                        & span{
+                                           
+                                        }
                                     }
+                                } 
+                                & .heroImag {
+                                    
+                                  
                                 }
-                            } 
-                         
+                            }
+                         }
                         }
                     }
     
@@ -252,7 +266,7 @@
               
             }
             & .owl-dots{
-            
+                left: 80px;
                 & .owl-dot{
                 
                     &.active{
@@ -299,29 +313,33 @@
                     & .owl-item{
                     
                         & .item{
-                         
-                            & .heroContent {
-                           
-                                & .subheading{
-                                    font-size: 14px;
-                                    &::before{
-                                       
+                         & .heroSectionOuter{
+                            & .heroSectionInner{
+
+                                & .heroContent {
+                               
+                                    & .subheading{
+                                        font-size: 14px;
+                                        &::before{
+                                           
+                                        }
                                     }
-                                }
-                                & .heading{
-                                    font-size: 28px;
-                                    line-height: 37px;
-                               & br{
-                                display: none;
-                               }
-                                    & span{
-                                       
+                                    & .heading{
+                                        font-size: 28px;
+                                        line-height: 37px;
+                                   & br{
+                                    display: none;
+                                   }
+                                        & span{
+                                           
+                                        }
                                     }
+                                } 
+                                & .heroImag{
+                                    
                                 }
-                            } 
-                            & .heroImag{
-                                
                             }
+                         }
                         }
                     }
     
@@ -378,26 +396,32 @@
                     & .owl-item{
                     
                         & .item{
-                         
-                            & .heroContent {
-                           
-                                & .subheading{
-                                    font-size: 12px;
-                                    &::before{
+                         & .heroSectionOuter{
+                            & .heroSectionInner{
+                                & .heroContent {
                                
+                                    & .subheading{
+                                        font-size: 12px;
+                                        &::before{
+                                   
+                                        }
                                     }
-                                }
-                                & .heading{
-                                    font-size: 18px;
-                                    line-height: 27px;
-                                    & span{
-                                       
+                                    & .heading{
+                                        font-size: 18px;
+                                        line-height: 27px;
+                                        & span{
+                                           
+                                        }
                                     }
+                                    & .heroBtn{
+                                        font-size: 13px;
+                                    }
+                                } 
+                                & .heroImag{
+                                    
                                 }
-                                & .heroBtn{
-                                    font-size: 13px;
-                                }
-                            } 
+                            }
+                         }
                         }
                     }
     
@@ -442,36 +466,38 @@
 
 @mixin heroSection-mixin-max-468px(){
     .heroSection{
-        height: 240px;
+        height: 300px;
         & .heroSectionowl{
             & .owl-stage-outer{
                 & .owl-stage{
                     & .owl-item{
                     
                         & .item{
-                            & .col-7{
-                                // width: 100%;
-
-                                & .heroContent {
+                                & .heroSectionOuter{
+                                    & .heroSectionInner{
+                                        & .heroContent {
                                
-                                    & .subheading{
-                                        padding-left: 0px;
-                                        &::before{
-                                           display: none;
-                                        }
-                                    }
-                                    & .heading{
-                                   
-                                        & span{
+                                            & .subheading{
+                                                padding-left: 0px;
+                                                &::before{
+                                                   display: none;
+                                                }
+                                            }
+                                            & .heading{
                                            
+                                                & span{
+                                                   
+                                                }
+                                            }
+                                        } 
+                                        & .heroImag{
+                                            max-width: 300px !important;
                                         }
                                     }
-                                } 
+                                }
+                               
                             }
-                            & .heroImag{
-                                max-width: 300px !important;
-                            }
-                        }
+                          
                     }
     
                 }
@@ -479,6 +505,7 @@
             }
             & .owl-dots{
                 gap: 30px;
+                left: 15px;
                 & .owl-dot{
                 
                     &.active{
@@ -545,7 +572,7 @@
         & .cardContent{
             position: absolute;
             left: 20px;
-            bottom: 42px;
+            bottom: 38px;
             & .text{
                 color: lighten($black, 60);
                 font-size: 16px;
@@ -721,7 +748,8 @@
              
                 }
                 & .heading{
-                 
+                    font-size:24px;
+                    list-style: 26px;
                 }
                 & .heroBtn{
                     & .icon{
@@ -753,7 +781,8 @@
                   
                 }
                 & .heading{
-                  
+                    font-size:24px;
+                    list-style: 26px;
                 }
                 & .heroBtn{
                     & .icon{
@@ -782,7 +811,7 @@
             }
         & .card-body{
             & .cardImage{
-                max-width: 183px;
+                max-width: 169px;
             }
             & .cardContent{
               
@@ -790,7 +819,7 @@
                     font-size: 15px;
                 }
                 & .heading{
-                    font-size: 22px;
+                    font-size: 21px;
                     line-height: 24px;
                 }
                 & .heroBtn{
@@ -820,12 +849,12 @@
                 max-width: 136px;
             }
             & .cardContent{
-           
+                bottom: 30px;
                 & .text{
                   font-size: 15px;
                 }
                 & .heading{
-                  font-size: 22px;
+                  font-size: 21px;
                   line-height: 24px;
                 }
                 & .heroBtn{
