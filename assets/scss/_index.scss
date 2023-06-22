@@ -1,6 +1,4 @@
 .heroSection{
- 
-    // height: 88vh;
     height: calc(100vh - 80px);
     width: 100%;
     & .heroSectionowl{
@@ -12,41 +10,56 @@
                 height: 100% !important;
                 & .owl-item{
                     height: 100%  !important;
+                    
                     & .item{
-                        background-color: $theme1;
-                        border: 3px solid $white;
-                        outline: 1px solid $theme1;
-                        & .heroContent {
-                            position: absolute;
-                            top: 50%;
-                            transform: translate(0,-50%);
-                            & .subheading{
-                                color:#A89D9C;
-                                position: relative;
-                                font-size: 16px;
-                                padding-left: 36px;
-                                &::before{
+                        // background-color: $theme1;
+                        // border: 1px solid $theme1;
+                        & .heroSectionOuter {
+                            border: 1px solid $theme1;
+                            padding: 3px;
+                            & .heroSectionInner {
+                                background-color: $theme1;
+                                & .heroContent {
                                     position: absolute;
-                                    content: '';
-                                    background-color: #A89D9C;
-                                    width: 30px;
-                                    height: 3px;
                                     top: 50%;
-                                    transform: translateY(-50%);
-                                    left: 0;
+                                    transform: translate(0,-50%);
+                                    & .subheading{
+                                        color:#A89D9C;
+                                        position: relative;
+                                        font-size: 16px;
+                                        padding-left: 36px;
+                                        &::before{
+                                            position: absolute;
+                                            content: '';
+                                            background-color: #A89D9C;
+                                            width: 30px;
+                                            height: 3px;
+                                            top: 50%;
+                                            transform: translateY(-50%);
+                                            left: 0;
+                                        }
+                                    }
+                                    & .heading{
+                                        font-size: 69px;
+                                        line-height: 74px;
+                                        font-weight: 200;
+                                        & span{
+                                            font-weight: 600;
+                                        }
+                                    }
+                                    & .heroBtn{
+                                        & .icon{
+                                            width: 16px;
+                                            height: 16px;
+                                        }
+                                    }
+                                } 
+                                & .heroImag {
+                                    height: 100%;
+                                    max-width: 400px;
+                                
                                 }
                             }
-                            & .heading{
-                                font-weight: 200;
-                                & span{
-                                    font-weight: 600;
-                                }
-                            }
-                        } 
-                        & .heroImag {
-                            max-height: 100%;
-                            max-width: 400px;
-                          
                         }
                     }
                 }
@@ -146,27 +159,30 @@
                     & .owl-item{
                     
                         & .item{
-                         
-                            & .heroContent {
-                           
-                                & .subheading{
-                             
-                                    &::before{
+                         & .heroSectionOuter{
+                            & .heroSectionInner{
+                                & .heroContent {
                                
+                                    & .subheading{
+                                 
+                                        &::before{
+                                   
+                                        }
                                     }
-                                }
-                                & .heading{
-                                    font-size: 60px;
-                                    line-height: 66px;
-                                    & span{
-                                       
+                                    & .heading{
+                                        font-size: 60px;
+                                        line-height: 66px;
+                                        & span{
+                                           
+                                        }
                                     }
+                                } 
+                                & .heroImag {
+                                    
+                                  
                                 }
-                            } 
-                            & .heroImag {
-                                
-                              
                             }
+                         }
                         }
                     }
     
@@ -174,7 +190,7 @@
               
             }
             & .owl-dots{
-            
+                left: 80px;
                 & .owl-dot{
                 
                     &.active{
@@ -210,7 +226,6 @@
 // Medium devices (tablets, less than 992px)
 @mixin heroSection-mixin-max-md() {
     .heroSection{
-        height:400px;
         & .heroSectionowl{
             & .owl-stage-outer{
              
@@ -220,24 +235,30 @@
                     & .owl-item{
                     
                         & .item{
-                        
-                            & .heroContent {
-                           
-                                & .subheading{
-                             
-                                    &::before{
+                         & .heroSectionOuter{
+                            & .heroSectionInner{
+                                & .heroContent {
                                
+                                    & .subheading{
+                                 
+                                        &::before{
+                                   
+                                        }
                                     }
-                                }
-                                & .heading{
-                                    font-size: 40px;
-                                    line-height: 49px;
-                                    & span{
-                                       
+                                    & .heading{
+                                        font-size: 40px;
+                                        line-height: 49px;
+                                        & span{
+                                           
+                                        }
                                     }
+                                } 
+                                & .heroImag {
+                                    
+                                  
                                 }
-                            } 
-                         
+                            }
+                         }
                         }
                     }
     
@@ -245,7 +266,7 @@
               
             }
             & .owl-dots{
-            
+                left: 80px;
                 & .owl-dot{
                 
                     &.active{
@@ -292,29 +313,33 @@
                     & .owl-item{
                     
                         & .item{
-                         
-                            & .heroContent {
-                           
-                                & .subheading{
-                                    font-size: 14px;
-                                    &::before{
-                                       
+                         & .heroSectionOuter{
+                            & .heroSectionInner{
+
+                                & .heroContent {
+                               
+                                    & .subheading{
+                                        font-size: 14px;
+                                        &::before{
+                                           
+                                        }
                                     }
-                                }
-                                & .heading{
-                                    font-size: 28px;
-                                    line-height: 37px;
-                               & br{
-                                display: none;
-                               }
-                                    & span{
-                                       
+                                    & .heading{
+                                        font-size: 28px;
+                                        line-height: 37px;
+                                   & br{
+                                    display: none;
+                                   }
+                                        & span{
+                                           
+                                        }
                                     }
+                                } 
+                                & .heroImag{
+                                    
                                 }
-                            } 
-                            & .heroImag{
-                                
                             }
+                         }
                         }
                     }
     
@@ -371,26 +396,32 @@
                     & .owl-item{
                     
                         & .item{
-                         
-                            & .heroContent {
-                           
-                                & .subheading{
-                                    font-size: 12px;
-                                    &::before{
+                         & .heroSectionOuter{
+                            & .heroSectionInner{
+                                & .heroContent {
                                
+                                    & .subheading{
+                                        font-size: 12px;
+                                        &::before{
+                                   
+                                        }
                                     }
-                                }
-                                & .heading{
-                                    font-size: 18px;
-                                    line-height: 27px;
-                                    & span{
-                                       
+                                    & .heading{
+                                        font-size: 18px;
+                                        line-height: 27px;
+                                        & span{
+                                           
+                                        }
                                     }
+                                    & .heroBtn{
+                                        font-size: 13px;
+                                    }
+                                } 
+                                & .heroImag{
+                                    
                                 }
-                                & .heroBtn{
-                                    font-size: 13px;
-                                }
-                            } 
+                            }
+                         }
                         }
                     }
     
@@ -435,41 +466,46 @@
 
 @mixin heroSection-mixin-max-468px(){
     .heroSection{
+        height: 300px;
         & .heroSectionowl{
             & .owl-stage-outer{
                 & .owl-stage{
                     & .owl-item{
                     
                         & .item{
-                            & .col-7{
-                                width: 100%;
-
-                                & .heroContent {
+                                & .heroSectionOuter{
+                                    & .heroSectionInner{
+                                        & .heroContent {
                                
-                                    & .subheading{
-                                 
-                                        &::before{
-                                   
-                                        }
-                                    }
-                                    & .heading{
-                                   
-                                        & span{
+                                            & .subheading{
+                                                padding-left: 0px;
+                                                &::before{
+                                                   display: none;
+                                                }
+                                            }
+                                            & .heading{
                                            
+                                                & span{
+                                                   
+                                                }
+                                            }
+                                        } 
+                                        & .heroImag{
+                                            max-width: 300px !important;
                                         }
                                     }
-                                } 
+                                }
+                               
                             }
-                            & .heroImag{
-                                display: none;
-                            }
-                        }
+                          
                     }
     
                 }
               
             }
             & .owl-dots{
+                gap: 30px;
+                left: 15px;
                 & .owl-dot{
                 
                     &.active{
@@ -477,10 +513,11 @@
                     }
                     &:nth-child(1) {
                         &::after {
-                     
+                          
                         }
                         &::before{
-                     
+                            width: 27px;
+                            height: 2px;
                         }
                     }
                     &:nth-child(2) {
@@ -488,7 +525,9 @@
                   
                         }
                         &::before{
-                        
+                            left: 87px;
+                            width: 27px;
+                            height: 2px;
                         }
                     }
                     &:nth-child(3) {
@@ -503,3 +542,546 @@
     }
 }
 
+
+
+// shippingSection
+
+.shippingSection{
+    & .shippingCard{
+        height: 380px;
+        transition: all 0.3s ease-in-out;
+        overflow: hidden;
+        cursor: pointer;
+        &:hover{
+            & .card-body{
+                & .cardImage{
+                    transform: scale(1.1);
+                }
+            }
+        }
+    & .card-body{
+        & .cardImage{
+            max-width: 333px;
+            max-height: 363px;
+            position: absolute;
+            right: 0px;
+            bottom: 0;
+            transition: all 0.3s ease-in-out;
+            overflow: hidden;
+        }
+        & .cardContent{
+            position: absolute;
+            left: 20px;
+            bottom: 38px;
+            & .text{
+                color: lighten($black, 60);
+                font-size: 16px;
+                line-height: 22px;
+            }
+            & .heading{
+                font-size: 26px;
+                line-height: 32px;
+            }
+            & .heroBtn{
+                & .icon{
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+        }
+    }
+      
+
+    }
+
+    & .shippingCard1{
+        height: 250px;
+        transition: all 0.3s ease-in-out;
+        overflow: hidden;
+        cursor: pointer;
+        &:hover{
+            & .card-body{
+                & .cardImage{
+                    transform: scale(1.1);
+                }
+            }
+        }
+    & .card-body{
+        & .cardImage{
+            max-width: 196px;
+            max-height: 363px;
+            position: absolute;
+            right: 37px;
+            bottom: 0;
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+        & .cardContent{
+            position: absolute;
+            left: 20px;
+            bottom: 30px;
+            & .text{
+                color: lighten($black, 60);
+                font-size: 16px;
+                line-height: 22px;
+            }
+            & .heading{
+                font-size: 26px;
+                line-height: 32px;
+            }
+            & .heroBtn{
+                & .icon{
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+        }
+    }
+      
+
+    }
+ 
+}
+
+
+// Small devices (landscape phones, 576px and up)
+@mixin shippingSection-mixin-min-sm() {}
+// Medium devices (tablets, 768px and up)
+@mixin shippingSection-mixin-min-md() {}
+// Large devices (desktops, 992px and up)
+@mixin shippingSection-mixin-min-lg() {}
+// X-Large devices (large desktops, 1200px and up)
+@mixin shippingSection-mixin-min-xl() {}
+// XX-Large devices (larger desktops, 1400px and up)
+@mixin shippingSection-mixin-min-xxl() {}
+
+// X-Large devices (large desktops, less than 1400px)
+@mixin shippingSection-mixin-max-xl() {
+    .shippingSection{
+        & .shippingCard{
+       
+            &:hover{
+                & .card-body{
+                    & .cardImage{
+                     
+                    }
+                }
+            }
+        & .card-body{
+            & .cardImage{
+           
+            }
+            & .cardContent{
+              
+                & .text{
+             
+                }
+                & .heading{
+                 
+                }
+                & .heroBtn{
+                    & .icon{
+                      
+                    }
+                }
+            }
+        }
+          
+    
+        }
+    
+        & .shippingCard1{
+         
+            &:hover{
+                & .card-body{
+                    & .cardImage{
+                     
+                    }
+                }
+            }
+        & .card-body{
+            & .cardImage{
+        
+            }
+            & .cardContent{
+           
+                & .text{
+                  
+                }
+                & .heading{
+                  
+                }
+                & .heroBtn{
+                    & .icon{
+                      
+                    }
+                }
+            }
+        }
+          
+    
+        }
+     
+    }
+}
+
+// Large devices (desktops, less than 1200px)
+@mixin shippingSection-mixin-max-lg() {
+    .shippingSection{
+        
+        & .shippingCard{
+            height: 334px;
+            &:hover{
+                & .card-body{
+                    & .cardImage{
+                       
+                    }
+                }
+            }
+        & .card-body{
+            & .cardImage{
+                max-width: 262px;
+            }
+            & .cardContent{
+              
+                & .text{
+             
+                }
+                & .heading{
+                    font-size:24px;
+                    list-style: 26px;
+                }
+                & .heroBtn{
+                    & .icon{
+                      
+                    }
+                }
+            }
+        }
+          
+    
+        }
+    
+        & .shippingCard1{
+         
+            &:hover{
+                & .card-body{
+                    & .cardImage{
+                     
+                    }
+                }
+            }
+        & .card-body{
+            & .cardImage{
+        
+            }
+            & .cardContent{
+           
+                & .text{
+                  
+                }
+                & .heading{
+                    font-size:24px;
+                    list-style: 26px;
+                }
+                & .heroBtn{
+                    & .icon{
+                      
+                    }
+                }
+            }
+        }
+          
+    
+        }
+     
+    }
+}
+// Medium devices (tablets, less than 992px)
+@mixin shippingSection-mixin-max-md() {
+    .shippingSection{
+        & .shippingCard{
+            height: 250px;
+            &:hover{
+                & .card-body{
+                    & .cardImage{
+                     
+                    }
+                }
+            }
+        & .card-body{
+            & .cardImage{
+                max-width: 169px;
+            }
+            & .cardContent{
+              
+                & .text{
+                    font-size: 15px;
+                }
+                & .heading{
+                    font-size: 21px;
+                    line-height: 24px;
+                }
+                & .heroBtn{
+                    font-size: 15px;
+                    & .icon{
+                      
+                    }
+                }
+            }
+        }
+          
+    
+        }
+    
+        & .shippingCard1{
+            height: 214px;
+            &:hover{
+                & .card-body{
+                    & .cardImage{
+                        
+                    }
+                }
+            }
+        & .card-body{
+            & .cardImage{
+                right: 16px;
+                max-width: 136px;
+            }
+            & .cardContent{
+                bottom: 30px;
+                & .text{
+                  font-size: 15px;
+                }
+                & .heading{
+                  font-size: 21px;
+                  line-height: 24px;
+                }
+                & .heroBtn{
+                    font-size: 15px;
+                    & .icon{
+                      
+                    }
+                }
+            }
+        }
+          
+    
+        }
+     
+    }
+    
+}
+// Small devices (landscape phones, less than 768px)
+@mixin shippingSection-mixin-max-sm() {
+    .shippingSection{
+        & .shippingCard{
+       
+            &:hover{
+                & .card-body{
+                    & .cardImage{
+                     
+                    }
+                }
+            }
+        & .card-body{
+            & .cardImage{
+           
+            }
+            & .cardContent{
+              
+                & .text{
+             
+                }
+                & .heading{
+                 
+                }
+                & .heroBtn{
+                    & .icon{
+                      
+                    }
+                }
+            }
+        }
+          
+    
+        }
+    
+        & .shippingCard1{
+         
+            &:hover{
+                & .card-body{
+                    & .cardImage{
+                     
+                    }
+                }
+            }
+        & .card-body{
+            & .cardImage{
+        
+            }
+            & .cardContent{
+           
+                & .text{
+                  
+                }
+                & .heading{
+                  
+                }
+                & .heroBtn{
+                    & .icon{
+                      
+                    }
+                }
+            }
+        }
+          
+    
+        }
+     
+    }
+    
+}
+// X-Small devices (portrait phones, less than 576px)
+@mixin shippingSection-mixin-max-xs() {
+ 
+    .shippingSection{
+        & .shippingCard{
+            height: 200px;
+            &:hover{
+                & .card-body{
+                    & .cardImage{
+                     
+                    }
+                }
+            }
+        & .card-body{
+            & .cardImage{
+                max-width: 150px;
+            }
+            & .cardContent{
+              
+                & .text{
+                    font-size: 14px;
+                }
+                & .heading{
+                 font-size: 20px;
+                }
+                & .heroBtn{
+                    font-size: 14px;
+                    & .icon{
+                      
+                    }
+                }
+            }
+        }
+          
+    
+        }
+    
+        & .shippingCard1{
+            height: 200px;
+            &:hover{
+                & .card-body{
+                    & .cardImage{
+                     
+                    }
+                }
+            }
+        & .card-body{
+            & .cardImage{
+        
+            }
+            & .cardContent{
+           
+                & .text{
+                  font-size: 14px;
+                }
+                & .heading{
+                  font-size: 20px;
+                }
+                & .heroBtn{
+                    font-size: 14px;
+                    & .icon{
+                      
+                    }
+                }
+            }
+        }
+          
+    
+        }
+     
+    }
+}
+
+@mixin shippingSection-mixin-max-468px(){
+    .shippingSection{
+        & .shippingCard{
+       
+            &:hover{
+                & .card-body{
+                    & .cardImage{
+                     
+                    }
+                }
+            }
+        & .card-body{
+            & .cardImage{
+                max-width:135px;
+            }
+            & .cardContent{
+              
+                & .text{
+                    font-size: 13px;
+                }
+                & .heading{
+                 font-size: 18px;
+                }
+                & .heroBtn{
+                    font-size: 13px;
+                    & .icon{
+                      
+                    }
+                }
+            }
+        }
+          
+    
+        }
+    
+        & .shippingCard1{
+         
+            &:hover{
+                & .card-body{
+                    & .cardImage{
+                     
+                    }
+                }
+            }
+        & .card-body{
+            & .cardImage{
+                max-width: 107px;
+            }
+            & .cardContent{
+           
+                & .text{
+                  font-size: 13px;
+                }
+                & .heading{
+                  font-size: 18px;
+                }
+                & .heroBtn{
+                    font-size: 13px;
+                    & .icon{
+                      
+                    }
+                }
+            }
+        }
+          
+    
+        }
+     
+    }
+}

@@ -1,0 +1,674 @@
+.footer{
+    & .footerHeading{
+        font-size: 18px;
+    }
+    & .text{
+        font-size: 15px;
+        color: lighten($black, 60) !important;
+    }
+    & .socialMedia{
+        & ul{
+            & li{
+                & .icon{
+                    width: 18px;
+                    height: 18px;
+                    transition: all 0.3s ease-in-out;
+                    &:hover{
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+    }
+    & .footerLink{
+        & ul{
+            & li{
+                & a{
+                    position: relative;
+                    transition: all 0.3s ease-in-out;
+                    &::before{
+                        position: absolute;
+                        content: '';
+                        background-color: white;
+                        height: 2px;
+                        width: 15px;
+                        left: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        opacity: 0;
+                        transition: all 0.3s ease-in-out;
+                    }
+                    &::after{
+                        position: absolute;
+                        content: '';
+                        background-color: white;
+                        height: 5px;
+                        width: 5px;
+                        left: 14px;
+                        border-radius: 50%;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        opacity: 0;
+                        transition: all 0.3s ease-in-out;
+                    }
+                    &:hover{
+                        padding-left: 22px;
+                        &::before{
+                            opacity: 10;
+                        }
+                        &::after{
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    & .icon{
+        width: 17px;
+        height: 17px;
+        color: lighten($black, 60) !important;
+    }
+    & .newsletter{
+        & .input-group{
+            & .form-control {
+                &::placeholder{
+                    font-size: 14px;
+                    color:$white;
+                }
+            }
+        }
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@mixin footer-mixin-min-sm() {
+    .footer{
+        & .footerHeading{
+          
+        }
+        & .text{
+          
+        }
+        & .socialMedia{
+            & ul{
+                & li{
+                    & .icon{
+                  
+                        &:hover{
+                         
+                        }
+                    }
+                }
+            }
+        }
+        & .footerLink{
+            & ul{
+                & li{
+                    & a{
+                     
+                        &::before{
+                        
+                        }
+                        &::after{
+                    
+                        }
+                        &:hover{
+                         
+                            &::before{
+                         
+                            }
+                            &::after{
+                              
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & .icon{
+          
+        }
+        & .newsletter{
+            & .input-group{
+                & .form-control {
+                    &::placeholder{
+                      
+                    }
+                }
+            }
+        }
+    }
+}
+// Medium devices (tablets, 768px and up)
+@mixin footer-mixin-min-md() {
+    .footer{
+        & .footerHeading{
+          
+        }
+        & .text{
+          
+        }
+        & .socialMedia{
+            & ul{
+                & li{
+                    & .icon{
+                  
+                        &:hover{
+                         
+                        }
+                    }
+                }
+            }
+        }
+        & .footerLink{
+            & ul{
+                & li{
+                    & a{
+                     
+                        &::before{
+                        
+                        }
+                        &::after{
+                    
+                        }
+                        &:hover{
+                         
+                            &::before{
+                         
+                            }
+                            &::after{
+                              
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & .icon{
+          
+        }
+        & .newsletter{
+            & .input-group{
+                & .form-control {
+                    &::placeholder{
+                      
+                    }
+                }
+            }
+        }
+    }
+}
+// Large devices (desktops, 992px and up)
+@mixin footer-mixin-min-lg() {
+    .footer{
+        & .footerHeading{
+          
+        }
+        & .text{
+          
+        }
+        & .socialMedia{
+            & ul{
+                & li{
+                    & .icon{
+                  
+                        &:hover{
+                         
+                        }
+                    }
+                }
+            }
+        }
+        & .footerLink{
+            & ul{
+                & li{
+                    & a{
+                     
+                        &::before{
+                        
+                        }
+                        &::after{
+                    
+                        }
+                        &:hover{
+                         
+                            &::before{
+                         
+                            }
+                            &::after{
+                              
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & .icon{
+          
+        }
+        & .newsletter{
+            & .input-group{
+                & .form-control {
+                    &::placeholder{
+                      
+                    }
+                }
+            }
+        }
+    }
+}
+// X-Large devices (large desktops, 1200px and up)
+@mixin footer-mixin-min-xl() {
+    .footer{
+        & .footerHeading{
+          
+        }
+        & .text{
+          
+        }
+        & .socialMedia{
+            & ul{
+                & li{
+                    & .icon{
+                  
+                        &:hover{
+                         
+                        }
+                    }
+                }
+            }
+        }
+        & .footerLink{
+            & ul{
+                & li{
+                    & a{
+                     
+                        &::before{
+                        
+                        }
+                        &::after{
+                    
+                        }
+                        &:hover{
+                         
+                            &::before{
+                         
+                            }
+                            &::after{
+                              
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & .icon{
+          
+        }
+        & .newsletter{
+            & .input-group{
+                & .form-control {
+                    &::placeholder{
+                      
+                    }
+                }
+            }
+        }
+    }
+}
+// XX-Large devices (larger desktops, 1400px and up)
+@mixin footer-mixin-min-xxl() {
+    .footer{
+        & .footerHeading{
+          
+        }
+        & .text{
+          
+        }
+        & .socialMedia{
+            & ul{
+                & li{
+                    & .icon{
+                  
+                        &:hover{
+                         
+                        }
+                    }
+                }
+            }
+        }
+        & .footerLink{
+            & ul{
+                & li{
+                    & a{
+                     
+                        &::before{
+                        
+                        }
+                        &::after{
+                    
+                        }
+                        &:hover{
+                         
+                            &::before{
+                         
+                            }
+                            &::after{
+                              
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & .icon{
+          
+        }
+        & .newsletter{
+            & .input-group{
+                & .form-control {
+                    &::placeholder{
+                      
+                    }
+                }
+            }
+        }
+    }
+}
+// X-Large devices (large desktops, less than 1400px)
+@mixin footer-mixin-max-xl() {
+    .footer{
+        & .footerHeading{
+          
+        }
+        & .text{
+          
+        }
+        & .socialMedia{
+            & ul{
+                & li{
+                    & .icon{
+                  
+                        &:hover{
+                         
+                        }
+                    }
+                }
+            }
+        }
+        & .footerLink{
+            & ul{
+                & li{
+                    & a{
+                     
+                        &::before{
+                        
+                        }
+                        &::after{
+                    
+                        }
+                        &:hover{
+                         
+                            &::before{
+                         
+                            }
+                            &::after{
+                              
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & .icon{
+          
+        }
+        & .newsletter{
+            & .input-group{
+                & .form-control {
+                    &::placeholder{
+                      
+                    }
+                }
+            }
+        }
+    }
+}
+// Large devices (desktops, less than 1200px)
+@mixin footer-mixin-max-lg() {
+    .footer{
+        & .footerHeading{
+          
+        }
+        & .text{
+          
+        }
+        & .socialMedia{
+            & ul{
+                & li{
+                    & .icon{
+                  
+                        &:hover{
+                         
+                        }
+                    }
+                }
+            }
+        }
+        & .footerLink{
+            & ul{
+                & li{
+                    & a{
+                     
+                        &::before{
+                        
+                        }
+                        &::after{
+                    
+                        }
+                        &:hover{
+                         
+                            &::before{
+                         
+                            }
+                            &::after{
+                              
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & .icon{
+          
+        }
+        & .newsletter{
+            & .input-group{
+                & .form-control {
+                    &::placeholder{
+                      
+                    }
+                }
+            }
+        }
+    }
+}
+// Medium devices (tablets, less than 992px)
+@mixin footer-mixin-max-md() {
+    .footer{
+        & .footerHeading{
+            font-size: 17px;
+        }
+        & .text{
+            font-size: 14px;
+        }
+        & .socialMedia{
+            & ul{
+                & li{
+                    & .icon{
+                  
+                        &:hover{
+                         
+                        }
+                    }
+                }
+            }
+        }
+        & .footerLink{
+            & ul{
+                & li{
+                    & a{
+                     
+                        &::before{
+                        
+                        }
+                        &::after{
+                    
+                        }
+                        &:hover{
+                         
+                            &::before{
+                         
+                            }
+                            &::after{
+                              
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & .icon{
+          
+        }
+        & .newsletter{
+            & .input-group{
+                & .form-control {
+                    &::placeholder{
+                      
+                    }
+                }
+            }
+        }
+    }
+}
+// Small devices (landscape phones, less than 768px)
+@mixin footer-mixin-max-sm() {
+    .footer{
+        & .footerHeading{
+            font-size: 16px;
+        }
+        & .text{
+          font-size: 13px;
+        }
+        & .socialMedia{
+            & ul{
+                & li{
+                    & .icon{
+                        width: 16px;
+                        height: 15px;
+                        &:hover{
+                         
+                        }
+                    }
+                }
+            }
+        }
+        & .footerLink{
+            & ul{
+                & li{
+                    & a{
+                     
+                        &::before{
+                        
+                        }
+                        &::after{
+                    
+                        }
+                        &:hover{
+                         
+                            &::before{
+                         
+                            }
+                            &::after{
+                              
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & .icon{
+          
+        }
+        & .newsletter{
+            & .input-group{
+                & .form-control {
+                    &::placeholder{
+                      
+                    }
+                }
+            }
+        }
+    }
+}
+// X-Small devices (portrait phones, less than 576px)
+@mixin footer-mixin-max-xs() {
+    .footer{
+        & .footerHeading{
+            font-size: 15px;
+        }
+        & .text{
+          
+        }
+        & .socialMedia{
+            & ul{
+                & li{
+                    & .icon{
+                  
+                        &:hover{
+                         
+                        }
+                    }
+                }
+            }
+        }
+        & .footerLink{
+            & ul{
+                & li{
+                    & a{
+                     
+                        &::before{
+                        
+                        }
+                        &::after{
+                    
+                        }
+                        &:hover{
+                         
+                            &::before{
+                         
+                            }
+                            &::after{
+                              
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & .icon{
+          
+        }
+        & .newsletter{
+            & .input-group{
+                & .form-control {
+                    &::placeholder{
+                      
+                    }
+                }
+            }
+        }
+    }
+}
