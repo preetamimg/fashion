@@ -1,5 +1,5 @@
 .heroSection{
-    height: calc(100vh - 80px);
+    height:550px;
     width: 100%;
     & .heroSectionowl{
         & .owl-stage-outer{
@@ -10,10 +10,11 @@
                 height: 100% !important;
                 & .owl-item{
                     height: 100%  !important;
+                    
                     & .item{
                         background-color: $theme1;
-                        border: 3px solid $white;
-                        outline: 1px solid $theme1;
+                        border: 2px solid $red;
+                        outline: 3px solid $black;
                         & .heroContent {
                             position: absolute;
                             top: 50%;
@@ -50,7 +51,7 @@
                             }
                         } 
                         & .heroImag {
-                            max-height: 100%;
+                            height: 100%;
                             max-width: 400px;
                           
                         }
@@ -441,6 +442,7 @@
 
 @mixin heroSection-mixin-max-468px(){
     .heroSection{
+        height: 240px;
         & .heroSectionowl{
             & .owl-stage-outer{
                 & .owl-stage{
@@ -453,9 +455,9 @@
                                 & .heroContent {
                                
                                     & .subheading{
-                                 
+                                        padding-left: 0px;
                                         &::before{
-                                   
+                                           display: none;
                                         }
                                     }
                                     & .heading{
@@ -467,7 +469,6 @@
                                 } 
                             }
                             & .heroImag{
-                                // display: none;
                                 max-width: 300px !important;
                             }
                         }
@@ -477,6 +478,7 @@
               
             }
             & .owl-dots{
+                gap: 30px;
                 & .owl-dot{
                 
                     &.active{
@@ -484,10 +486,11 @@
                     }
                     &:nth-child(1) {
                         &::after {
-                     
+                          
                         }
                         &::before{
-                     
+                            width: 27px;
+                            height: 2px;
                         }
                     }
                     &:nth-child(2) {
@@ -495,7 +498,9 @@
                   
                         }
                         &::before{
-                        
+                            left: 87px;
+                            width: 27px;
+                            height: 2px;
                         }
                     }
                     &:nth-child(3) {
@@ -519,6 +524,7 @@
         height: 380px;
         transition: all 0.3s ease-in-out;
         overflow: hidden;
+        cursor: pointer;
         &:hover{
             & .card-body{
                 & .cardImage{
@@ -546,7 +552,7 @@
                 line-height: 22px;
             }
             & .heading{
-                font-size: 24px;
+                font-size: 26px;
                 line-height: 32px;
             }
             & .heroBtn{
@@ -565,6 +571,7 @@
         height: 250px;
         transition: all 0.3s ease-in-out;
         overflow: hidden;
+        cursor: pointer;
         &:hover{
             & .card-body{
                 & .cardImage{
@@ -592,7 +599,7 @@
                 line-height: 22px;
             }
             & .heading{
-                font-size: 24px;
+                font-size: 26px;
                 line-height: 32px;
             }
             & .heroBtn{
@@ -694,18 +701,19 @@
 // Large devices (desktops, less than 1200px)
 @mixin shippingSection-mixin-max-lg() {
     .shippingSection{
+        
         & .shippingCard{
-       
+            height: 334px;
             &:hover{
                 & .card-body{
                     & .cardImage{
-                     
+                       
                     }
                 }
             }
         & .card-body{
             & .cardImage{
-           
+                max-width: 262px;
             }
             & .cardContent{
               
@@ -764,7 +772,7 @@
 @mixin shippingSection-mixin-max-md() {
     .shippingSection{
         & .shippingCard{
-       
+            height: 250px;
             &:hover{
                 & .card-body{
                     & .cardImage{
@@ -774,17 +782,19 @@
             }
         & .card-body{
             & .cardImage{
-           
+                max-width: 183px;
             }
             & .cardContent{
               
                 & .text{
-             
+                    font-size: 15px;
                 }
                 & .heading{
-                 
+                    font-size: 22px;
+                    line-height: 24px;
                 }
                 & .heroBtn{
+                    font-size: 15px;
                     & .icon{
                       
                     }
@@ -796,27 +806,30 @@
         }
     
         & .shippingCard1{
-         
+            height: 214px;
             &:hover{
                 & .card-body{
                     & .cardImage{
-                     
+                        
                     }
                 }
             }
         & .card-body{
             & .cardImage{
-        
+                right: 16px;
+                max-width: 136px;
             }
             & .cardContent{
            
                 & .text{
-                  
+                  font-size: 15px;
                 }
                 & .heading{
-                  
+                  font-size: 22px;
+                  line-height: 24px;
                 }
                 & .heroBtn{
+                    font-size: 15px;
                     & .icon{
                       
                     }
@@ -905,7 +918,7 @@
  
     .shippingSection{
         & .shippingCard{
-       
+            height: 200px;
             &:hover{
                 & .card-body{
                     & .cardImage{
@@ -915,17 +928,18 @@
             }
         & .card-body{
             & .cardImage{
-           
+                max-width: 150px;
             }
             & .cardContent{
               
                 & .text{
-             
+                    font-size: 14px;
                 }
                 & .heading{
-                 
+                 font-size: 20px;
                 }
                 & .heroBtn{
+                    font-size: 14px;
                     & .icon{
                       
                     }
@@ -937,7 +951,7 @@
         }
     
         & .shippingCard1{
-         
+            height: 200px;
             &:hover{
                 & .card-body{
                     & .cardImage{
@@ -952,12 +966,13 @@
             & .cardContent{
            
                 & .text{
-                  
+                  font-size: 14px;
                 }
                 & .heading{
-                  
+                  font-size: 20px;
                 }
                 & .heroBtn{
+                    font-size: 14px;
                     & .icon{
                       
                     }
@@ -984,17 +999,18 @@
             }
         & .card-body{
             & .cardImage{
-           
+                max-width:135px;
             }
             & .cardContent{
               
                 & .text{
-             
+                    font-size: 13px;
                 }
                 & .heading{
-                 
+                 font-size: 18px;
                 }
                 & .heroBtn{
+                    font-size: 13px;
                     & .icon{
                       
                     }
@@ -1016,17 +1032,18 @@
             }
         & .card-body{
             & .cardImage{
-        
+                max-width: 107px;
             }
             & .cardContent{
            
                 & .text{
-                  
+                  font-size: 13px;
                 }
                 & .heading{
-                  
+                  font-size: 18px;
                 }
                 & .heroBtn{
+                    font-size: 13px;
                     & .icon{
                       
                     }

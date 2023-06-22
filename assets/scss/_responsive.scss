@@ -207,4 +207,5 @@
 
 @media (max-width: 468px) {
   @include heroSection-mixin-max-468px();
+  @include shippingSection-mixin-max-468px();
 }
