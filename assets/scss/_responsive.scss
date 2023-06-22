@@ -8,6 +8,8 @@
     @include footer-mixin-min-sm();
     @include shippingSection-mixin-min-sm();
 
+    @include main-mixin-min-sm();
+    @include pageHeading-mixin-min-sm();
 
 
 
@@ -21,6 +23,8 @@
   @include footer-mixin-min-md();
   @include shippingSection-mixin-min-md();
 
+  @include main-mixin-min-md();
+  @include pageHeading-mixin-min-md();
 
 
 
@@ -33,6 +37,8 @@
   @include footer-mixin-min-lg();
   @include shippingSection-mixin-min-lg();
 
+  @include main-mixin-min-lg();
+  @include pageHeading-mixin-min-lg();
 
 
 
@@ -45,6 +51,8 @@
   @include footer-mixin-min-xl();
   @include shippingSection-mixin-min-xl();  
 
+  @include main-mixin-min-xl();  
+  @include pageHeading-mixin-min-xl();  
 
 
 
@@ -56,6 +64,8 @@
   @include heroSection-mixin-min-xxl();
   @include footer-mixin-min-xxl();
   @include shippingSection-mixin-min-xxl();
+  @include main-mixin-min-xxl();
+  @include pageHeading-mixin-min-xxl();
 
 
 
@@ -71,6 +81,8 @@
 
 
 
+  @include main-mixin-max-xl();
+  @include pageHeading-mixin-max-xl();
 }
 
 // Large devices (desktops, less than 1200px)
@@ -79,6 +91,8 @@
   @include heroSection-mixin-max-lg(); 
   @include footer-mixin-max-lg(); 
   @include shippingSection-mixin-max-lg(); 
+  @include main-mixin-max-lg(); 
+  @include pageHeading-mixin-max-lg(); 
  
 
 
@@ -90,6 +104,8 @@
   @include heroSection-mixin-max-md();
   @include footer-mixin-max-md();
   @include shippingSection-mixin-max-md();
+  @include main-mixin-max-md();
+  @include pageHeading-mixin-max-md();
 
 
 
@@ -101,6 +117,8 @@
   @include heroSection-mixin-max-sm();
   @include footer-mixin-max-sm();
   @include shippingSection-mixin-max-sm();
+  @include main-mixin-max-sm();
+  @include pageHeading-mixin-max-sm();
   
 
 
@@ -113,6 +131,8 @@
   @include footer-mixin-max-xs();
   @include shippingSection-mixin-max-xs();
 
+  @include main-mixin-max-xs();
+  @include pageHeading-mixin-max-xs();
 }
 
 
