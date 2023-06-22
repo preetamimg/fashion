@@ -25,18 +25,15 @@ $(document).ready(function () {
     loop:true,
     // margin:20,
     nav:true,
-    dots:false,
+    dots:true,
     autoplay:false,
     autoplayTimeout:5000,
     autoplayHoverPause:true,
     // navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
     responsive:{
         0:{
-            items:1
-        },
-        440:{
             items:2,
-            margin:20
+            margin:10
         },
         600:{
             items:2,
@@ -66,17 +63,15 @@ $(document).ready(function () {
     loop:true,
     margin:20,
     nav:true,
-    dots:false,
+    dots:true,
     autoplay:false,
     autoplayTimeout:5000,
     autoplayHoverPause:true,
     // navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
     responsive:{
         0:{
-            items:1
-        },
-        440:{
-            items:2
+            items:2,
+            margin:10
         },
         600:{
             items:2
@@ -99,31 +94,27 @@ $(document).ready(function () {
     loop:true,
     // margin:15,
     nav:true,
-    dots:false,
+    dots:true,
     autoplay:false,
     autoplayTimeout:5000,
     autoplayHoverPause:true,
     // navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
     responsive:{
         0:{
-            items:1,
-            margin:10
-        },
-        440:{
             items:2,
-            margin:20
+            margin:10
         },
         600:{
             items:2,
-            margin:20
+            margin:15
         },
         768: {
             items:3,
-            margin:20
+            margin:15
         },
         1000:{
             items:4,
-            margin:20
+            margin:15
         }
     }
   })
