@@ -1,6 +1,7 @@
 .heroSection{
     height: calc(100vh - 80px);
     width: 100%;
+    padding-bottom: 90px;
     & .heroSectionowl{
         & .owl-stage-outer{
             padding: 0;
@@ -40,9 +41,9 @@
                                         }
                                     }
                                     & .heading{
-                                        font-size: 69px;
-                                        line-height: 74px;
-                                        font-weight: 200;
+                                        font-size: 74px;
+                                        line-height: 82px;
+                                        font-weight: 100;
                                         & span{
                                             font-weight: 600;
                                         }
@@ -51,6 +52,52 @@
                                         & .icon{
                                             width: 16px;
                                             height: 16px;
+                                        }
+                                    }
+                                    & .owl-dots{
+                                      padding-top: 30px;
+                                        display: flex;
+                                        gap: 45px;
+                                        & .owl-dot{
+                                            width: 29px;
+                                                height: 29px;
+                                                font-size: 16px;
+                                                color: #A89D9C;
+                                                font-weight: 500;
+                                                position: relative;
+                                            &.active{
+                                                font-weight: 500 ;
+                                                color: $black;
+                                                font-size: 17px;
+                                            }
+                                            &:nth-child(1) {
+                                              
+                                                &::before{
+                                                    position: absolute;
+                                                    content:'';
+                                                    width: 35px;
+                                                    height: 2px;
+                                                    top: 50%;
+                                                    transform: translateY(-50%);
+                                                    background-color: #A89D9C;
+                                                    left: 34px;
+                                                    transform: translateY(-50%);
+                                                }
+                                            }
+                                            &:nth-child(2) {
+                                                &::before{
+                                                    position: absolute;
+                                                    content:'';
+                                                    width: 35px;
+                                                    height: 2px;
+                                                    top: 50%;
+                                                    transform: translateY(-50%);
+                                                    background-color: #A89D9C;
+                                                    left: 34px;
+                                                    transform: translateY(-50%);
+                                                }
+                                            }
+                                         
                                         }
                                     }
                                 } 
@@ -65,71 +112,8 @@
                 }
 
             }
-
-          
         }
-        & .owl-dots{
-            display: flex;
-            position: absolute;
-            bottom: 60px;
-            left: 113px;
-            gap: 50px;
-            & .owl-dot{
-                width: 29px;
-                height: 29px;
-                z-index: 3;
-                font-size: 16px;
-                color: #A89D9C;
-                &.active{
-                    font-weight: 500 ;
-                    color: $black;
-                    font-size: 17px;
-                }
-                &:nth-child(1) {
-                    &::after {
-                        content: "01";
-                        position: absolute;
-                        top: 50%;
-                        transform: translate(-50%,-50%);
-                    }
-                    &::before{
-                        position: absolute;
-                        content:'';
-                        width: 40px;
-                        height: 3px;
-                        background-color: #A89D9C;
-                        left: 34px;
-                        transform: translateY(-50%);
-                    }
-                }
-                &:nth-child(2) {
-                    &::after {
-                        content: "02";
-                        position: absolute;
-                        top: 50%;
-                        transform: translate(-50%,-50%);
-                    }
-                    &::before{
-                        position: absolute;
-                        content:'';
-                        width: 40px;
-                        height: 3px;
-                        background-color: #A89D9C;
-                        left: 114px;
-                        transform: translateY(-50%);
-                    }
-                }
-                &:nth-child(3) {
-                    &::after {
-                        content: "03";
-                        position: absolute;
-                        top: 50%;
-                        transform: translate(-50%,-50%);
-                    }
-                }
-              
-            }
-        }
+        
     }
 }
 
@@ -145,11 +129,76 @@
 @mixin heroSection-mixin-min-xxl() {}
 
 // X-Large devices (large desktops, less than 1400px)
-@mixin heroSection-mixin-max-xl() {}
+@mixin heroSection-mixin-max-xl() {
+    .heroSection{
+        & .heroSectionowl{
+            & .owl-stage-outer{
+             
+    
+                & .owl-stage{
+                  
+                    & .owl-item{
+                    
+                        & .item{
+                         & .heroSectionOuter{
+                            & .heroSectionInner{
+                                & .heroContent {
+                               
+                                    & .subheading{
+                                 
+                                        &::before{
+                                   
+                                        }
+                                    }
+                                    & .heading{
+                                     
+                                        & span{
+                                           
+                                        }
+                                    }
+                                    & .owl-dots{
+                                        padding-top: 10px;
+                                        & .owl-dot{
+                                         
+                                            &.active{
+                                                
+                                            }
+                                            &:nth-child(1) {
+                                              
+                                                &::before{
+                                         
+                                                }
+                                            }
+                                            &:nth-child(2) {
+                                                &::before{
+                                      
+                                                }
+                                            }
+                                         
+                                        }
+                                    }
+                                } 
+                                & .heroImag {
+                                    
+                                  
+                                }
+                            }
+                         }
+                        }
+                    }
+    
+                }
+              
+            }
+       
+        }
+    }
+}
 
 // Large devices (desktops, less than 1200px)
 @mixin heroSection-mixin-max-lg() {
     .heroSection{
+        padding-bottom: 70px;
         & .heroSectionowl{
             & .owl-stage-outer{
              
@@ -176,6 +225,27 @@
                                            
                                         }
                                     }
+                                    & .owl-dots{
+                                        padding-top: 15px;
+                                        & .owl-dot{
+                                         
+                                            &.active{
+                                                
+                                            }
+                                            &:nth-child(1) {
+                                              
+                                                &::before{
+                                         
+                                                }
+                                            }
+                                            &:nth-child(2) {
+                                                &::before{
+                                      
+                                                }
+                                            }
+                                         
+                                        }
+                                    }
                                 } 
                                 & .heroImag {
                                     
@@ -189,43 +259,14 @@
                 }
               
             }
-            & .owl-dots{
-                left: 80px;
-                & .owl-dot{
-                
-                    &.active{
-                       
-                    }
-                    &:nth-child(1) {
-                        &::after {
-                     
-                        }
-                        &::before{
-                     
-                        }
-                    }
-                    &:nth-child(2) {
-                        &::after {
-                  
-                        }
-                        &::before{
-                        
-                        }
-                    }
-                    &:nth-child(3) {
-                        &::after {
-                         
-                        }
-                    }
-                  
-                }
-            }
+         
         }
     }
 }
 // Medium devices (tablets, less than 992px)
 @mixin heroSection-mixin-max-md() {
     .heroSection{
+        padding-bottom: 50px;
         & .heroSectionowl{
             & .owl-stage-outer{
              
@@ -252,6 +293,27 @@
                                            
                                         }
                                     }
+                                    & .owl-dots{
+                                     
+                                        & .owl-dot{
+                                         
+                                            &.active{
+                                                
+                                            }
+                                            &:nth-child(1) {
+                                              
+                                                &::before{
+                                         
+                                                }
+                                            }
+                                            &:nth-child(2) {
+                                                &::before{
+                                      
+                                                }
+                                            }
+                                         
+                                        }
+                                    }
                                 } 
                                 & .heroImag {
                                     
@@ -265,37 +327,7 @@
                 }
               
             }
-            & .owl-dots{
-                left: 80px;
-                & .owl-dot{
-                
-                    &.active{
-                       
-                    }
-                    &:nth-child(1) {
-                        &::after {
-                     
-                        }
-                        &::before{
-                     
-                        }
-                    }
-                    &:nth-child(2) {
-                        &::after {
-                  
-                        }
-                        &::before{
-                        
-                        }
-                    }
-                    &:nth-child(3) {
-                        &::after {
-                         
-                        }
-                    }
-                  
-                }
-            }
+          
         }
     }
     
@@ -303,6 +335,7 @@
 // Small devices (landscape phones, less than 768px)
 @mixin heroSection-mixin-max-sm() {
     .heroSection{
+        padding-bottom: 30px;
         height:300px;
         & .heroSectionowl{
             & .owl-stage-outer{
@@ -334,6 +367,27 @@
                                            
                                         }
                                     }
+                                    & .owl-dots{
+                                     
+                                        & .owl-dot{
+                                         
+                                            &.active{
+                                                
+                                            }
+                                            &:nth-child(1) {
+                                              
+                                                &::before{
+                                         
+                                                }
+                                            }
+                                            &:nth-child(2) {
+                                                &::before{
+                                      
+                                                }
+                                            }
+                                         
+                                        }
+                                    }
                                 } 
                                 & .heroImag{
                                     
@@ -346,38 +400,7 @@
                 }
               
             }
-            & .owl-dots{
-                left: 56px;
-                bottom: 20px;
-                & .owl-dot{
-                  
-                    &.active{
-                       
-                    }
-                    &:nth-child(1) {
-                        &::after {
-                     
-                        }
-                        &::before{
-                     
-                        }
-                    }
-                    &:nth-child(2) {
-                        &::after {
-                  
-                        }
-                        &::before{
-                        
-                        }
-                    }
-                    &:nth-child(3) {
-                        &::after {
-                         
-                        }
-                    }
-                  
-                }
-            }
+           
         }
     }
     
@@ -386,7 +409,8 @@
 @mixin heroSection-mixin-max-xs() {
  
     .heroSection{
-        height: 280px;
+        padding-bottom: 20px;
+        height:230px;
         & .heroSectionowl{
             & .owl-stage-outer{
              
@@ -416,6 +440,29 @@
                                     & .heroBtn{
                                         font-size: 13px;
                                     }
+                                    & .owl-dots{
+                                        gap: 30px;
+                                        & .owl-dot{
+                                         font-size: 14PX;
+                                            &.active{
+                                                font-size: 15px;
+                                            }
+                                            &:nth-child(1) {
+                                              
+                                                &::before{
+                                                    left: 30px;
+                                                    width: 26px;
+                                                }
+                                            }
+                                            &:nth-child(2) {
+                                                &::before{
+                                                    left: 30px;
+                                                    width: 26px;
+                                                }
+                                            }
+                                         
+                                        }
+                                    }
                                 } 
                                 & .heroImag{
                                     
@@ -430,7 +477,7 @@
             }
             & .owl-dots{
                 bottom: 15px;
-                left: 24px;
+                left: 10px;
                 & .owl-dot{
                 font-size: 13px;
                     &.active{
@@ -466,7 +513,7 @@
 
 @mixin heroSection-mixin-max-468px(){
     .heroSection{
-        height: 300px;
+        height: 200px;
         & .heroSectionowl{
             & .owl-stage-outer{
                 & .owl-stage{
@@ -489,9 +536,31 @@
                                                    
                                                 }
                                             }
+                                            & .owl-dots{
+                                         
+                                                
+                                                & .owl-dot{
+                                                 
+                                                    &.active{
+                                                        
+                                                    }
+                                                    &:nth-child(1) {
+                                                      
+                                                        &::before{
+                                                 
+                                                        }
+                                                    }
+                                                    &:nth-child(2) {
+                                                        &::before{
+                                              
+                                                        }
+                                                    }
+                                                 
+                                                }
+                                            }
                                         } 
                                         & .heroImag{
-                                            max-width: 300px !important;
+                                            // max-width: 300px !important;
                                         }
                                     }
                                 }
@@ -503,41 +572,7 @@
                 }
               
             }
-            & .owl-dots{
-                gap: 30px;
-                left: 15px;
-                & .owl-dot{
-                
-                    &.active{
-                       
-                    }
-                    &:nth-child(1) {
-                        &::after {
-                          
-                        }
-                        &::before{
-                            width: 27px;
-                            height: 2px;
-                        }
-                    }
-                    &:nth-child(2) {
-                        &::after {
-                  
-                        }
-                        &::before{
-                            left: 87px;
-                            width: 27px;
-                            height: 2px;
-                        }
-                    }
-                    &:nth-child(3) {
-                        &::after {
-                         
-                        }
-                    }
-                  
-                }
-            }
+        
         }
     }
 }

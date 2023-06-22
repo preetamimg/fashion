@@ -124,31 +124,40 @@
   <!-- navbar end -->
 
     <!-- heroSection  -->
-<div class="container-fluid overflow-hidden heroSection bg-white pb-xl-5 pt-lg-4 pt-md-3 pt-2 pb-2 ">
+<div class="container-fluid overflow-hidden heroSection bg-white ">
     <div class="heroSectionowl owl-carousel owl-theme h-100 ">
-        <div class="item h-100 mx-xl-5 mx-lg-4 mx-sm-3 mx-0">
+        <div class="item h-100 mx-md-5 mx-sm-3 mx-0 ">
             <div class="heroSectionOuter h-100">
                 <div class="heroSectionInner h-100">
-                    <div class="row mx-md-5 mx-sm-3 mx-0 h-100 ">
-                        <div class="col-lg-6 col-7 px-0  h-100 position-relative">-
-                            <div class="heroContent ">
-                                <div class="row mx-0 gap-lg-4 gap-md-3 gap-2">
-                                    <div class="col-12 ">
-                                            <div class="subheading fw-medium ">Find Your Signature Collection</div>
-                                    </div>
-                                    <div class="col-12">
-                                            <div class="heading"> Elevate Your <br> <span>Wardrobe</span></div>
-                                    </div>
-                                    <div class="col-auto">
-                                            <a href="#" class="text-decoration-none d-flex align-items-center text-black heroBtn"> Shop Now <span class="d-inline-flex icon ps-2"><img src="assets/img/Main-page/Polygon.svg" alt="shopNow" class="img-fluid w-100 h-100"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-5 position-relative h-100">
-                            <div class="heroImag position-absolute bottom-0"><img src="assets/img/Main-page/heroimage.png" alt="heroImg" class="img-fluid w-100 h-100 object-fit-contain"></div>
-                        </div>
-                </div>
+                    <div class="container h-100">
+                      <div class="row h-100 ">
+                          <div class="col-lg-7 col-8 h-100 position-relative">-
+                              <div class="heroContent ">
+                                  <div class="row mx-0 gap-lg-4 gap-md-3 gap-2">
+                                      <div class="col-12 px-0">
+                                              <div class="subheading fw-medium ">Find Your Signature Collection</div>
+                                      </div>
+                                      <div class="col-12 px-0">
+                                              <div class="heading"> Elevate Your <br> <span>Wardrobe</span></div>
+                                      </div>
+                                      <div class="col-auto px-0">
+                                              <a href="#" class="text-decoration-none d-flex align-items-center text-black heroBtn"> Shop Now <span class="d-inline-flex icon ps-2"><img src="assets/img/Main-page/Polygon.svg" alt="shopNow" class="img-fluid w-100 h-100"></span></a>
+                                      </div>
+                                      <div class="col-12 px-0">
+                                        <div class="owl-dots ">
+                                          <button role="button " class="owl-dot active">01</button>
+                                          <button role="button" class="owl-dot">02</button>
+                                          <button role="button" class="owl-dot">03</button>
+                                      </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-lg-5 col-4 position-relative h-100">
+                              <div class="heroImag position-absolute bottom-0"><img src="assets/img/Main-page/heroimage.png" alt="heroImg" class="img-fluid w-100 h-100 object-fit-contain"></div>
+                          </div>
+                      </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -2397,6 +2406,9 @@
     loop:true,
     margin:10,
     nav:false,
+    dotsContainer: '.owl-dots',
+    dotClass: 'owl-dot',
+    dotClassActive: 'owl-dot-active',
     responsive:{
         0:{
             items:1
