@@ -672,3 +672,12 @@
         }
     }
 }
+
+
+// copy right 
+.copyRight{
+    & .text{
+        color: lighten($black, 60) !important;
+        font-size: 13px;
+    }
+}
