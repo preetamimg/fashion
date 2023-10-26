@@ -3,3 +3,57 @@ font-size: 30px;
 font-weight: 400;
 color: $black;
 }
+
+// Small devices (landscape phones, 576px and up)
+@mixin pageHeading-mixin-min-sm() {
+    .pageHeading{
+    }
+}
+// Medium devices (tablets, 768px and up)
+@mixin pageHeading-mixin-min-md() {
+    .pageHeading{
+    }
+}
+// Large devices (desktops, 992px and up)
+@mixin pageHeading-mixin-min-lg() {
+    .pageHeading{
+    }
+}
+// X-Large devices (large desktops, 1200px and up)
+@mixin pageHeading-mixin-min-xl() {
+    .pageHeading{
+    }
+}
+// XX-Large devices (larger desktops, 1400px and up)
+@mixin pageHeading-mixin-min-xxl() {
+    .pageHeading{
+    }
+}
+// X-Large devices (large desktops, less than 1400px)
+@mixin pageHeading-mixin-max-xl() {
+    .pageHeading{
+    }
+}
+// Large devices (desktops, less than 1200px)
+@mixin pageHeading-mixin-max-lg() {
+    .pageHeading{
+    }
+}
+// Medium devices (tablets, less than 992px)
+@mixin pageHeading-mixin-max-md() {
+    .pageHeading{
+        font-size: 25px;
+    }
+}
+// Small devices (landscape phones, less than 768px)
+@mixin pageHeading-mixin-max-sm() {
+    .pageHeading{
+        font-size: 22px;
+    }
+}
+// X-Small devices (portrait phones, less than 576px)
+@mixin pageHeading-mixin-max-xs() {
+    .pageHeading{
+        font-size: 18px;
+    }
+}

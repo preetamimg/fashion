@@ -1,47 +1,50 @@
 .navbar {
-    height: 80px;
+    height: 90px;
     & .navlogo {
         font-size: 18px;
     }
-    & .nav-icon {
-        height: 20px;
-        width: 20px;
-        transition: all 0.3s ease-in-out;
-        &:hover {
-            transform: scale(1.2);
-        }
-    }
-    & .navbar-links {
-        font-size: 15px;
-        color: lighten($black, 35);
-        transition: all 0.3s ease-in-out;
-        &::before {
-            content: '';
-            position: absolute;
-            top:-3px;
-            left: 0;
-            width:0;
-            height: 2px;
-            background-color: $black;
+    & .nav-offcanvas {
+        width: 280px;
+        & .nav-icon {
+            height: 20px;
+            width: 20px;
             transition: all 0.3s ease-in-out;
+            &:hover {
+                transform: scale(1.2);
+            }
         }
-        &::after {
-            content: '';
-            position: absolute;
-            bottom:-3px;
-            right: 0;
-            width: 0;
-            height: 2px;
-            background-color: $black;
+        & .navbar-links {
+            font-size: 15px;
+            color: lighten($black, 35);
             transition: all 0.3s ease-in-out;
-        }
-        &:hover {
-            color: $black;
             &::before {
-                width: 100%;
+                content: '';
+                position: absolute;
+                top:-3px;
+                left: 0;
+                width:0;
+                height: 2px;
+                background-color: $black;
+                transition: all 0.3s ease-in-out;
             }
             &::after {
-                width: 100%;
+                content: '';
+                position: absolute;
+                bottom:-3px;
+                right: 0;
+                width: 0;
+                height: 2px;
+                background-color: $black;
+                transition: all 0.3s ease-in-out;
+            }
+            &:hover {
+                color: $black;
+                &::before {
+                    width: 100%;
+                }
+                &::after {
+                    width: 100%;
+                }
             }
         }
     }
@@ -56,7 +59,6 @@
     -webkit-box-shadow: 0 12px 6px rgba(0, 0, 0, 0.06);
     -moz-box-shadow: 0 12px 6px rgba(0, 0, 0, 0.06);
     box-shadow: 0 6px 6px rgba(0, 0, 0, 0.06);
-
   @keyframes fixedAnim {
     from {
         top: -50px;
@@ -109,18 +111,24 @@
 // Large devices (desktops, 992px and up)
 @mixin navbar-mixin-min-lg() {
     .navbar {
-        & .navbar-brand {
+        & .navlogo {
         }
         & .nav-offcanvas {
-            & .navbar-nav {
-                    & .nav-link {
-                        &::before {
-                        }
-                        &:hover {
-                            &::before {
-                            }
-                        }
+            & .nav-icon {
+                &:hover {
+                }
+            }
+            & .navbar-links {
+                &::before {
+                }
+                &::after {
+                }
+                &:hover {
+                    &::before {
                     }
+                    &::after {
+                    }
+                }
             }
         }
     }
@@ -128,18 +136,24 @@
 // X-Large devices (large desktops, 1200px and up)
 @mixin navbar-mixin-min-xl() {
     .navbar {
-        & .navbar-brand {
+        & .navlogo {
         }
         & .nav-offcanvas {
-            & .navbar-nav {
-                    & .nav-link {
-                        &::before {
-                        }
-                        &:hover {
-                            &::before {
-                            }
-                        }
+            & .nav-icon {
+                &:hover {
+                }
+            }
+            & .navbar-links {
+                &::before {
+                }
+                &::after {
+                }
+                &:hover {
+                    &::before {
                     }
+                    &::after {
+                    }
+                }
             }
         }
     }
@@ -147,18 +161,24 @@
 // XX-Large devices (larger desktops, 1400px and up)
 @mixin navbar-mixin-min-xxl() {
     .navbar {
-        & .navbar-brand {
+        & .navlogo {
         }
         & .nav-offcanvas {
-            & .navbar-nav {
-                    & .nav-link {
-                        &::before {
-                        }
-                        &:hover {
-                            &::before {
-                            }
-                        }
+            & .nav-icon {
+                &:hover {
+                }
+            }
+            & .navbar-links {
+                &::before {
+                }
+                &::after {
+                }
+                &:hover {
+                    &::before {
                     }
+                    &::after {
+                    }
+                }
             }
         }
     }
@@ -166,18 +186,24 @@
 // X-Large devices (large desktops, less than 1400px)
 @mixin navbar-mixin-max-xl() {
     .navbar {
-        & .navbar-brand {
+        & .navlogo {
         }
         & .nav-offcanvas {
-            & .navbar-nav {
-                    & .nav-link {
-                        &::before {
-                        }
-                        &:hover {
-                            &::before {
-                            }
-                        }
+            & .nav-icon {
+                &:hover {
+                }
+            }
+            & .navbar-links {
+                &::before {
+                }
+                &::after {
+                }
+                &:hover {
+                    &::before {
                     }
+                    &::after {
+                    }
+                }
             }
         }
     }
@@ -185,18 +211,24 @@
 // Large devices (desktops, less than 1200px)
 @mixin navbar-mixin-max-lg() {
     .navbar {
-        & .navbar-brand {
+        & .navlogo {
         }
         & .nav-offcanvas {
-            & .navbar-nav {
-                    & .nav-link {
-                        &::before {
-                        }
-                        &:hover {
-                            &::before {
-                            }
-                        }
+            & .nav-icon {
+                &:hover {
+                }
+            }
+            & .navbar-links {
+                &::before {
+                }
+                &::after {
+                }
+                &:hover {
+                    &::before {
                     }
+                    &::after {
+                    }
+                }
             }
         }
     }
@@ -204,20 +236,32 @@
 // Medium devices (tablets, less than 992px)
 @mixin navbar-mixin-max-md() {
     .navbar {
-        & .navbar-brand {
-            width: 160px;
+        & .navlogo {
         }
         & .nav-offcanvas {
-            & .navbar-nav {
-                    & .nav-link {
-                        font-size: 13px;
-                        &::before {
-                        }
-                        &:hover {
-                            &::before {
-                            }
-                        }
+            & .nav-icon {
+                height: 18px;
+                width: 18px;
+                &:hover {
+                }
+            }
+            & .navbar-links {
+                font-size: 14px;
+                &::before {
+                    top: 5px;
+                }
+                &::after {
+                    bottom: 2px;
+                }
+                &:hover {
+                    &::before {
                     }
+                    &::after {
+                    }
+                }
+            }
+            & .btn-close {
+                font-size: 15px;
             }
         }
     }
@@ -225,29 +269,30 @@
 // Small devices (landscape phones, less than 768px)
 @mixin navbar-mixin-max-sm() {
     .navbar {
-        height: 75px;
-        & .navbar-brand {
-            height: auto;
-            width: 140px;
+        & .navlogo {
         }
         & .nav-offcanvas {
-            & .offcanvas-logo {
-                width: auto;
-                height: 40px;
+            & .nav-icon {
+                height: 17px;
+                width: 17px;
+                &:hover {
+                }
+            }
+            & .navbar-links {
+                font-size: 13px;
+                &::before {
+                }
+                &::after {
+                }
+                &:hover {
+                    &::before {
+                    }
+                    &::after {
+                    }
+                }
             }
             & .btn-close {
-                font-size: 13px;
-            }
-            & .navbar-nav {
-                    & .nav-link {
-                        font-size: 12px;
-                        &::before {
-                        }
-                        &:hover {
-                            &::before {
-                            }
-                        }
-                    }
+                font-size: 14px;
             }
         }
     }
@@ -256,28 +301,30 @@
 @mixin navbar-mixin-max-xs() {
     .navbar {
         height: 65px;
-        & .navbar-brand {
-            height: auto;
-            width: 120px;
+        & .navlogo {
         }
         & .nav-offcanvas {
-            & .offcanvas-logo {
-                height: 35px;
-                width: auto;
+            & .nav-icon {
+                height: 15px;
+                width: 15px;
+                &:hover {
+                }
+            }
+            & .navbar-links {
+                font-size: 12px;
+                &::before {
+                }
+                &::after {
+                }
+                &:hover {
+                    &::before {
+                    }
+                    &::after {
+                    }
+                }
             }
             & .btn-close {
-                font-size: 11px;
-            }
-            & .navbar-nav {
-                    & .nav-link {
-                        font-size: 11px;
-                        &::before {
-                        }
-                        &:hover {
-                            &::before {
-                            }
-                        }
-                    }
+                font-size: 12px;
             }
         }
     }
